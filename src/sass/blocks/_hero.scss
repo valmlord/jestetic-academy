@@ -4,7 +4,7 @@
 
   &::before {
     position: absolute;
-    content: url('../../img/hero/decor-mobile.svg');
+    content: url('/img/hero/decor-mobile.svg');
     top: 470px;
     left: -155px;
     z-index: -1;
@@ -13,7 +13,7 @@
 
   &::after {
     position: absolute;
-    content: url('../../img/hero/decor-mobile.svg');
+    content: url('/img/hero/decor-mobile.svg');
     top: 299px;
     right: -143px;
     z-index: -1;
@@ -79,6 +79,6 @@
     right: -60px;
     bottom: 196px;
     z-index: -1;
-    content: url('../../img/hero/element-mobile.svg');
+    content: url('/img/hero/element-mobile.svg');
   }
 }

@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://valmlord.github.io/jestetic-academy",
   "scripts": {
+    "deploy": "gh-pages -d public",
     "start": "gulp",
     "build": "gulp --production",
     "lint:js": "eslint .",
@@ -36,6 +38,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "gh-pages": "^5.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-babel": "^8.0.0",
