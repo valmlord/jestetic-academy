@@ -1,0 +1,17 @@
+@mixin font($font-size, $line-height, $font-family) {
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+@mixin tablet {
+  @media (width >= 767.98px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (width >= 1169.98px) {
+    @content;
+  }
+}

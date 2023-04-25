@@ -1,0 +1,84 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    position: absolute;
+    content: url('../../img/hero/decor-mobile.svg');
+    top: 470px;
+    left: -155px;
+    z-index: -1;
+    transform: rotate(245deg);
+  }
+
+  &::after {
+    position: absolute;
+    content: url('../../img/hero/decor-mobile.svg');
+    top: 299px;
+    right: -143px;
+    z-index: -1;
+  }
+
+  &__header {
+    position: relative;
+    display: flex;
+    padding-top: 177px;
+    overflow: hidden;
+    flex-direction: column;
+
+    &-title {
+      font: $mobile-title;
+      font-size: 41px;
+      text-transform: uppercase;
+
+      span {
+        font: inherit;
+        font-style: italic;
+      }
+    }
+
+    &-sign {
+      margin-top: 8px;
+      font: $decor;
+      text-transform: lowercase;
+      color: $black;
+    }
+  }
+
+  &__gallery {
+    position: relative;
+    margin-top: 50px;
+    padding-bottom: 53px;
+    overflow: hidden;
+  }
+
+  &__image {
+    &-first {
+      float: right;
+      width: 74%;
+      object-fit: cover;
+    }
+
+    &-second {
+      float: left;
+      width: 70%;
+      margin-top: 25px;
+      padding: 8px;
+      background: linear-gradient(to right, $black 1px, transparent 1px) 0 0,
+        linear-gradient(to left, $black 1px, transparent 1px) 100% 100%,
+        linear-gradient(to bottom, $black 1px, transparent 1px) 0 0,
+        linear-gradient(to top, $black 1px, transparent 1px) 100% 100%;
+      background-repeat: no-repeat;
+      background-size: 50% 50%;
+      object-fit: cover;
+    }
+  }
+
+  &__decor {
+    position: absolute;
+    right: -60px;
+    bottom: 196px;
+    z-index: -1;
+    content: url('../../img/hero/element-mobile.svg');
+  }
+}

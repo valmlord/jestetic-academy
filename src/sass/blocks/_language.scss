@@ -1,0 +1,68 @@
+.language {
+  position: relative;
+  width: 78px;
+  cursor: pointer;
+
+  &__current {
+    &-name {
+      padding: 0;
+      font: $desktop-text;
+      background: $white;
+      border: none;
+    }
+
+    &-icon {
+      width: 8px;
+      height: 13px;
+      transition: transform 0.6s ease-in-out;
+
+      &--active {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+
+  &__list {
+    position: absolute;
+    bottom: -90px;
+    z-index: 9999;
+    background-color: $white;
+    border: 1px solid $black;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.6s ease-in-out, visibility 0.6s ease-in-out;
+    list-style-type: none;
+
+    &--active {
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &-item {
+      width: 112px;
+      padding: 10px 36px 8px 18px;
+      font: $desktop-text;
+
+      &:hover {
+        background: $accent;
+      }
+
+      &:hover .language__list-link {
+        color: $white;
+      }
+    }
+
+    &-link {
+      font: $desktop-text;
+      text-decoration: none;
+      color: $black;
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+}

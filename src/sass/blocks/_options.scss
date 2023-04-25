@@ -1,0 +1,18 @@
+.options {
+  &__search {
+    margin-right: 35px;
+    cursor: pointer;
+
+    &-icon {
+      width: 27px;
+      height: 27px;
+    }
+  }
+
+  &__favorite {
+    &-icon {
+      width: 25px;
+      height: 25px;
+    }
+  }
+}

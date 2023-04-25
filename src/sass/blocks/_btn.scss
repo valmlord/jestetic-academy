@@ -1,0 +1,28 @@
+.btn {
+  width: 300px;
+  height: 60px;
+  font: $desktop-text;
+  line-height: 0;
+  text-align: center;
+  color: $white;
+  background-color: $accent;
+  border: 1px solid $accent;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: $accent;
+    background-color: $white;
+    border: 1px solid $accent;
+  }
+
+  &:active {
+    color: $accent;
+    background-color: $primary;
+    border: 1px solid $primary;
+  }
+
+  &-hero {
+    margin-top: 26px;
+  }
+}
