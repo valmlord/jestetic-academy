@@ -1,0 +1,54 @@
+.about {
+  background: $secondary;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 42px;
+    padding-bottom: 60px;
+
+    @include tablet {
+      padding-top: 62px;
+      padding-bottom: 91px;
+    }
+
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 35px;
+      padding-bottom: 30px;
+    }
+  }
+
+  &__photo {
+    width: 100%;
+    max-width: 373px;
+  }
+
+  &__description {
+    margin-top: 40px;
+
+    @include tablet {
+      margin-top: 60px;
+    }
+    &-title {
+      margin-top: 15px;
+    }
+    &-info {
+      margin-top: 18px;
+      font: $mobile-text;
+
+      @include tablet {
+        font: $desktop-text;
+        margin-top: 34px;
+      }
+
+      @include desktop {
+        max-width: 616px;
+      }
+    }
+  }
+}

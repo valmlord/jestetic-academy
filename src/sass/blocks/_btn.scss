@@ -24,5 +24,8 @@
 
   &-hero {
     margin-top: 26px;
+    @include tablet {
+      margin-top: 54px;
+    }
   }
 }

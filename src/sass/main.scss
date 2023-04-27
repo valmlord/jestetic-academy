@@ -1,4 +1,14 @@
-@import 'vendor/_libs.scss';
-@import 'helpers/*.scss';
-@import 'base/*.scss';
+// Variables, mixins, functions
+@import 'helpers/_variables';
+@import 'helpers/_mixins';
+@import 'helpers/_functions';
+
+// Library CSS files
+@import 'vendor/_libs';
+
+// Main
+@import 'base/_fonts';
+@import 'base/_general';
+
+// Modules
 @import 'blocks/*.scss';

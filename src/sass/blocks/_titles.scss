@@ -1,0 +1,14 @@
+.headline {
+  font: $mobile-text;
+  text-transform: uppercase;
+  color: $black;
+}
+
+.title {
+  font: $mobile-title;
+  text-transform: uppercase;
+  color: $black;
+  @include tablet {
+    font: $main-title;
+  }
+}

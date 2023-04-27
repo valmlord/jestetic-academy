@@ -20,6 +20,7 @@ h6 {
     display: block;
     width: 1170px;
     margin: 0 auto;
+    padding: 0 34px;
   }
 
   @include tablet {
@@ -27,4 +28,7 @@ h6 {
   }
 
   padding: 0 10px;
+}
+
+@media screen and (min-width: 767.98px) {
 }

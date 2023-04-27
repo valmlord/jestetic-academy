@@ -1,16 +1,26 @@
 <section class="hero">
     <div class="container">
-        <div class="hero__header">
-            <h1 class="hero__header-title">
-                International online <span>academy of aesthetics</span>
-            </h1>
-            <span class="hero__header-sign">by Julia Elizarova</span>
-            <button class="btn btn-hero" src="#">ver catálogo</button>
-        </div>
-        <div class="hero__gallery">
-            <img class="hero__image-first" src="/img/hero/hero-img-secondary.jpg" alt="gallery-img">
-            <img class="hero__image-second" src="/img/hero/hero-img-main.jpg" alt="gallery-img">
+        <div class="hero__wrapper">
+            <div class="hero__header">
+                <h1 class="hero__header-title">
+                    International online <span>academy of aesthetics</span>
+                </h1>
+                <span class="hero__header-sign">by Julia Elizarova</span>
+                <button class="btn btn-hero" src="#">ver catálogo</button>
+            </div>
+            <div class="hero__gallery">
+                <picture>
+                    <source srcset="img/hero/hero-img-secondary.webp" type="image/webp"><img class="hero__image-first"
+                        src="img/hero/hero-img-secondary.jpg" alt="gallery-img">
+                </picture>
+                <picture>
+                    <source srcset="img/hero/hero-img-main.webp" type="image/webp"><img class="hero__image-second"
+                        src="img/hero/hero-img-main.jpg" alt="gallery-img">
+                </picture>
+            </div>
         </div>
     </div>
-    <div class="hero__decor"></div>
+    <div class="hero__decor hero__decor--first"></div>
+    <div class="hero__decor hero__decor--second"></div>
+    <div class="hero__decor hero__decor--third"></div>
 </section>
