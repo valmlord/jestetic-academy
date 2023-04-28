@@ -1,12 +1,13 @@
 .hero {
   position: relative;
   overflow: hidden;
+
   &__wrapper {
-    padding-top: 182px;
     @include tablet {
       padding-top: 201px;
       padding-bottom: 82px;
     }
+
     @include desktop {
       position: relative;
       display: flex;
@@ -14,21 +15,35 @@
       padding-top: 282px;
       padding-bottom: 143px;
     }
+
+    padding-top: 182px;
   }
+
   &__header {
+    @include desktop {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      overflow: visible;
+
+      &::before {
+        position: absolute;
+        content: url('../img/hero/decor-full.svg');
+        top: 200px;
+        right: 53%;
+        z-index: -1;
+        transform: rotate(254deg);
+      }
+    }
+
     position: relative;
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    @include desktop {
-      width: 100%;
-      position: absolute;
-      left: 0;
-    }
+
     &-sign {
-      margin-top: 8px;
-      font: $decor;
       text-transform: lowercase;
+      margin-top: 8px;
       color: $black;
       @include tablet {
         position: absolute;
@@ -41,25 +56,25 @@
         bottom: 35%;
       }
     }
+
     &-title {
-      font: $mobile-title;
-      text-transform: uppercase;
       @include tablet {
         position: relative;
         max-width: 638px;
-        font: $main-title;
+        font: $desktop-title;
       }
+
+      font: $mobile-title;
+      text-transform: uppercase;
+
       span {
         font: inherit;
         font-style: italic;
       }
     }
   }
+
   &__gallery {
-    position: relative;
-    margin-top: 50px;
-    padding-bottom: 53px;
-    overflow: hidden;
     @include tablet {
       display: flex;
       align-items: flex-end;
@@ -69,34 +84,50 @@
 
     @include desktop {
       width: 65%;
+      overflow: visible;
+
+      &::before {
+        position: absolute;
+        content: url('../img/hero/decor-full.svg');
+        top: 160px;
+        right: 37%;
+        z-index: -1;
+      }
+
+      &::after {
+        position: absolute;
+        right: 150px;
+        bottom: -130px;
+        z-index: -1;
+        transform: rotate(145deg);
+        content: url('../img/hero/decor-mini.svg');
+      }
     }
+
+    position: relative;
+    margin-top: 50px;
+    padding-bottom: 53px;
+    overflow: hidden;
   }
+
   &__image {
     &-first {
-      float: right;
-      width: 74%;
       @include tablet {
         float: none;
         width: 96%;
         height: auto;
         margin-bottom: 12px;
       }
+
       @include desktop {
         margin-bottom: -68px;
       }
-    }
-    &-second {
-      float: left;
-      width: 67%;
-      margin-top: 25px;
-      padding: 7px;
 
-      background: linear-gradient(to right, #000 1px, transparent 1px) 0 0,
-        linear-gradient(to left, #000 1px, transparent 1px) 100% 100%,
-        linear-gradient(to bottom, #000 1px, transparent 1px) 0 0,
-        linear-gradient(to top, #000 1px, transparent 1px) 100% 100%;
-      background-repeat: no-repeat;
-      background-size: 49% 50%;
+      float: right;
+      width: 74%;
+    }
+
+    &-second {
       @include tablet {
         float: none;
         width: 96%;
@@ -105,49 +136,67 @@
         padding: 12px;
         background-size: 48% 49%;
       }
+
+      float: left;
+      width: 67%;
+      margin-top: 25px;
+      padding: 7px;
+      background: linear-gradient(to right, #000 1px, transparent 1px) 0 0,
+        linear-gradient(to left, #000 1px, transparent 1px) 100% 100%,
+        linear-gradient(to bottom, #000 1px, transparent 1px) 0 0,
+        linear-gradient(to top, #000 1px, transparent 1px) 100% 100%;
+      background-repeat: no-repeat;
+      background-size: 49% 50%;
     }
   }
+
   &__decor {
     @include desktop {
       display: none;
     }
+
     &--first {
+      @include tablet {
+        top: 782px;
+        left: 30%;
+        transform: rotate(18deg);
+      }
+
       position: absolute;
       content: url('../img/hero/decor-full.svg');
       top: 470px;
       left: -155px;
       z-index: -1;
       transform: rotate(245deg);
-      @include tablet {
-        top: 782px;
-        left: 30%;
-        transform: rotate(18deg);
-      }
     }
+
     &--second {
-      position: absolute;
-      content: url('../img/hero/decor-full.svg');
-      top: 299px;
-      right: -143px;
-      z-index: -1;
       @include tablet {
         content: url('../img/hero/decor-mini.svg');
         top: 369px;
         right: -13px;
         transform: rotateY(175deg);
       }
-    }
-    &--third {
+
       position: absolute;
-      right: -60px;
-      bottom: 196px;
+      content: url('../img/hero/decor-full.svg');
+      top: 299px;
+      right: -143px;
       z-index: -1;
-      content: url('../img/hero/decor-mini.svg');
+    }
+
+    &--third {
       @include tablet {
         top: 567px;
         left: -66px;
         transform: rotate(185deg);
       }
+
+      position: absolute;
+      right: -60px;
+      bottom: 196px;
+      z-index: -1;
+      content: url('../img/hero/decor-mini.svg');
     }
   }
 }

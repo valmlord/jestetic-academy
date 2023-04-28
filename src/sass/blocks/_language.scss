@@ -49,10 +49,6 @@
       &:hover {
         background: $accent;
       }
-
-      &:hover .language__list-link {
-        color: $white;
-      }
     }
 
     &-link {
@@ -65,4 +61,8 @@
       }
     }
   }
+}
+
+.language__list-link:hover .language__list-link {
+  color: $white;
 }

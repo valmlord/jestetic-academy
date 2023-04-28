@@ -5,10 +5,11 @@
 }
 
 .title {
+  @include tablet {
+    font: $desktop-title;
+  }
+
   font: $mobile-title;
   text-transform: uppercase;
   color: $black;
-  @include tablet {
-    font: $main-title;
-  }
 }
