@@ -5,6 +5,10 @@
   font-family: 'Futura PT', sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 h1,
 h2,
 h3,
@@ -31,5 +35,74 @@ h6 {
 }
 
 .sign {
-  font: $decor;
+  font: $decor-small;
+}
+
+.decorarion {
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  color: $accent;
+  white-space: nowrap;
+  overflow: visible;
+  opacity: 0.35;
+  @include tablet {
+    font: $decor-big;
+  }
+}
+
+.decor {
+  position: relative;
+
+  &__line {
+    position: absolute;
+    font: $desktop-title;
+    text-transform: uppercase;
+    white-space: nowrap;
+    i {
+      font: inherit;
+      text-transform: lowercase;
+      font-style: italic;
+    }
+
+    &--first {
+      top: 0;
+      left: -280px;
+      @include desktop {
+        left: 0;
+      }
+    }
+
+    &--second {
+      top: 80px;
+      left: -400px;
+      @include desktop {
+        left: -70px;
+      }
+    }
+
+    &--third {
+      top: 160px;
+      left: -350px;
+      @include desktop {
+        left: -15px;
+      }
+    }
+
+    &--fourth {
+      top: 240px;
+      left: -730px;
+      @include desktop {
+        left: -470px;
+      }
+    }
+
+    &--fifth {
+      top: 320px;
+      left: -100px;
+      @include desktop {
+        left: 156px;
+      }
+    }
+  }
 }

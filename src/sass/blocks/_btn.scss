@@ -26,7 +26,15 @@
     @include tablet {
       margin-top: 54px;
     }
-
     margin-top: 26px;
+  }
+
+  &-records {
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    @include desktop {
+      margin-top: 68px;
+    }
   }
 }

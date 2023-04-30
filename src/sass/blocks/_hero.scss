@@ -3,6 +3,8 @@
   overflow: hidden;
 
   &__wrapper {
+    padding-top: 182px;
+
     @include tablet {
       padding-top: 201px;
       padding-bottom: 82px;
@@ -15,11 +17,13 @@
       padding-top: 282px;
       padding-bottom: 143px;
     }
-
-    padding-top: 182px;
   }
 
-  &__header {
+  &__promo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
     @include desktop {
       position: absolute;
       left: 0;
@@ -35,46 +39,47 @@
         transform: rotate(254deg);
       }
     }
+  }
 
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-
-    &-sign {
-      text-transform: lowercase;
-      margin-top: 8px;
-      color: $black;
-      @include tablet {
-        position: absolute;
-        bottom: 33%;
-        left: 390px;
-        margin: 0;
-      }
-
-      @include desktop {
-        bottom: 35%;
-      }
+  &__sign {
+    text-transform: lowercase;
+    margin-top: 8px;
+    color: $black;
+    @include tablet {
+      position: absolute;
+      top: 150px;
+      left: 390px;
+      margin: 0;
+      font: $decor-small;
     }
 
-    &-title {
-      @include tablet {
-        position: relative;
-        max-width: 638px;
-        font: $desktop-title;
-      }
+    @include desktop {
+      bottom: 37%;
+      left: 400px;
+    }
+  }
 
-      font: $mobile-title;
-      text-transform: uppercase;
+  &__title {
+    font: $mobile-title;
+    text-transform: uppercase;
 
-      span {
-        font: inherit;
-        font-style: italic;
-      }
+    span {
+      font: inherit;
+      font-style: italic;
+    }
+
+    @include tablet {
+      position: relative;
+      max-width: 638px;
+      font: $desktop-title;
     }
   }
 
   &__gallery {
+    position: relative;
+    margin-top: 50px;
+    padding-bottom: 53px;
+    overflow: hidden;
     @include tablet {
       display: flex;
       align-items: flex-end;
@@ -103,15 +108,13 @@
         content: url('../img/hero/decor-mini.svg');
       }
     }
-
-    position: relative;
-    margin-top: 50px;
-    padding-bottom: 53px;
-    overflow: hidden;
   }
 
   &__image {
     &-first {
+      float: right;
+      width: 74%;
+
       @include tablet {
         float: none;
         width: 96%;
@@ -122,21 +125,9 @@
       @include desktop {
         margin-bottom: -68px;
       }
-
-      float: right;
-      width: 74%;
     }
 
     &-second {
-      @include tablet {
-        float: none;
-        width: 96%;
-        height: auto;
-        margin-top: 0;
-        padding: 12px;
-        background-size: 48% 49%;
-      }
-
       float: left;
       width: 67%;
       margin-top: 25px;
@@ -147,6 +138,15 @@
         linear-gradient(to top, #000 1px, transparent 1px) 100% 100%;
       background-repeat: no-repeat;
       background-size: 49% 50%;
+
+      @include tablet {
+        float: none;
+        width: 96%;
+        height: auto;
+        margin-top: 0;
+        padding: 12px;
+        background-size: 48% 49%;
+      }
     }
   }
 

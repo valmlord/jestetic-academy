@@ -1,0 +1,91 @@
+.records {
+  overflow: hidden;
+  padding-top: 115px;
+  padding-bottom: 470px;
+  position: relative;
+
+  @include tablet {
+    padding-top: 152px;
+    padding-bottom: 530px;
+  }
+
+  &__headline {
+    text-align: center;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    margin-top: 7px;
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    text-align: left;
+
+    &-img {
+      width: 100%;
+      max-width: 338px;
+      @include tablet {
+        width: 100%;
+        max-width: 100%;
+        max-height: 440px;
+        object-fit: cover;
+      }
+
+      @include desktop {
+        max-width: 350px;
+      }
+    }
+    &-title {
+      margin-top: 20px;
+      font: $records-title;
+      font-weight: bold;
+    }
+    &-description {
+      margin-top: 8px;
+      font: $mobile-text;
+      @include tablet {
+        max-width: 357px;
+        font: $desktop-text;
+      }
+    }
+
+    &-link {
+      display: block;
+      margin-top: 15px;
+      color: $black;
+      font: $mobile-text;
+      font-weight: bold;
+      @include tablet {
+        align-self: flex-start;
+        margin-top: 11px;
+      }
+    }
+
+    &-icon {
+      display: inline-block;
+      width: 35px;
+      height: 10px;
+      margin-left: 19px;
+    }
+  }
+
+  &__decor {
+    margin-top: 79px;
+    @include tablet {
+      margin-top: 134px;
+    }
+  }
+}
