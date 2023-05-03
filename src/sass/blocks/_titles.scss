@@ -9,10 +9,11 @@
     font: $desktop-title;
   }
 
+  margin-top: 15px;
   font: $mobile-title;
   text-transform: uppercase;
   color: $black;
-  margin-top: 15px;
+
   span {
     font: inherit;
     font-style: italic;

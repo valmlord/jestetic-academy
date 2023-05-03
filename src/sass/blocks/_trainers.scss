@@ -1,0 +1,96 @@
+.trainers {
+  padding-top: 78px;
+  padding-bottom: 81px;
+  background: $secondary;
+
+  &__subtitle {
+    margin-top: 14px;
+    font: $mobile-text;
+    text-transform: lowercase;
+  }
+
+  .slider {
+    display: flex;
+    flex-direction: column;
+
+    &__item {
+      &-image {
+        width: 100%;
+        margin-top: 41px;
+        padding: 8px;
+        background: linear-gradient(to right, #000 1px, transparent 1px) 0 0,
+          linear-gradient(to left, #000 1px, transparent 1px) 100% 100%,
+          linear-gradient(to bottom, #000 1px, transparent 1px) 0 0,
+          linear-gradient(to top, #000 1px, transparent 1px) 100% 100%;
+        background-repeat: no-repeat;
+        background-size: 50% 50%;
+      }
+
+      &-description {
+        padding-left: 10px;
+      }
+
+      &-qualification {
+        margin-top: 48px;
+        font: $decor;
+        text-transform: lowercase;
+        color: $black;
+      }
+
+      &-name {
+        font: $subtitle-normal;
+      }
+
+      &-certificate {
+        margin-top: 5px;
+        font: $mobile-text;
+        color: $light-black;
+        border-bottom: 1px solid $black;
+      }
+
+      &-info {
+        margin-top: 19px;
+
+        &:first-of-type {
+          margin-top: 29px;
+        }
+
+        h5 {
+          font: $desktop-text;
+          color: $black;
+        }
+
+        p,
+        a {
+          font: $mobile-text;
+          text-transform: uppercase;
+          color: $light-black;
+        }
+      }
+    }
+
+    &__nav {
+      display: flex;
+      justify-content: space-between;
+      max-width: 144px;
+      margin-top: 60px;
+      padding-left: 10px;
+
+      &-next,
+      &-prev {
+        border: none;
+        cursor: pointer;
+      }
+
+      .prev-icon,
+      .next-icon {
+        width: 57px;
+        height: 10px;
+      }
+    }
+  }
+}
+
+// .slider__item-image {
+//   max-width: 100%;
+// }

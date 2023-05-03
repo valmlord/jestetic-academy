@@ -1,5 +1,264 @@
 .footer {
+  @include tablet {
+    padding-bottom: 50px;
+  }
+
+  @include desktop {
+    padding-top: 84px;
+  }
+
   border-top: 1px solid $black;
-  padding-top: 56px;
-  padding-bottom: 50px;
+  padding-top: 47px;
+  padding-bottom: 40px;
+
+  &__wrapper {
+    @include tablet {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-direction: row;
+    }
+  }
+
+  &__networks {
+    @include tablet {
+      flex-basis: 49%;
+    }
+
+    @include desktop {
+      flex-basis: 31%;
+    }
+
+    &-subscribe {
+      @include tablet {
+        margin-top: 65px;
+      }
+
+      margin-top: 43px;
+    }
+
+    &-socials {
+      margin-top: 28px;
+    }
+
+    &-logo {
+      .logo {
+        &__img {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+
+  &__nav {
+    @include desktop {
+      display: flex;
+      flex-direction: column;
+    }
+
+    display: none;
+
+    &-title {
+      font: $desktop-text;
+      font-weight: bold;
+    }
+
+    &-menu {
+      margin-top: 34px;
+      list-style-type: none;
+    }
+  }
+
+  .nav {
+    &-menu {
+      &__item {
+        margin-top: 25px;
+
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+
+      &__link {
+        margin-top: 25px;
+        font: $desktop-text;
+        color: $black;
+      }
+    }
+  }
+
+  &__contacts {
+    @include tablet {
+      flex-basis: 36%;
+      margin-top: 0;
+      flex-direction: column-reverse;
+    }
+
+    @include desktop {
+      flex-basis: auto;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    margin-top: 46px;
+  }
+
+  &__copyrights {
+    @include tablet {
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-top: 74px;
+      font: $futura-medium;
+      flex-direction: row;
+    }
+
+    display: flex;
+    margin-top: 49px;
+    font: $desktop-text;
+    color: $black;
+    flex-direction: column;
+
+    &-info {
+      &:nth-child(2) {
+        @include tablet {
+          flex-basis: 49%;
+          margin-top: 0;
+        }
+
+        margin-top: 25px;
+      }
+    }
+
+    &-language {
+      @include tablet {
+        margin-top: 0;
+      }
+
+      @include desktop {
+        flex-basis: 11%;
+      }
+
+      margin-top: 24px;
+    }
+  }
+}
+
+.subscribe {
+  &__title {
+    font: $desktop-text;
+    font-weight: bold;
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 26px;
+    border-bottom: 1px solid $black;
+    padding-bottom: 14px;
+
+    &-input {
+      flex-basis: 80%;
+      font: $mobile-text;
+      color: $black;
+      border: none;
+    }
+
+    &-submit {
+      background: none;
+      border: none;
+    }
+
+    &-icon {
+      width: 42px;
+      height: 10px;
+    }
+  }
+}
+
+.socials {
+  @include tablet {
+    width: 62%;
+  }
+
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  flex-direction: row;
+
+  &__link {
+    &-icon {
+      width: 25px;
+      height: 25px;
+    }
+  }
+}
+
+.contacts {
+  display: flex;
+  justify-content: space-between;
+
+  &__column {
+    @include tablet {
+      align-items: flex-start;
+      margin-top: 46px;
+    }
+
+    @include desktop {
+      margin-top: 0;
+    }
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font: $desktop-text;
+    font-weight: bold;
+  }
+
+  &__link {
+    cursor: pointer;
+
+    &-email {
+      @include desktop {
+        margin-top: 34px;
+      }
+
+      margin-top: 26px;
+      margin-bottom: 20px;
+      font: $desktop-text;
+      color: $black;
+    }
+
+    &-phone {
+      font: $desktop-text;
+      color: $black;
+    }
+  }
+
+  &__scroll {
+    @include tablet {
+      align-self: flex-end;
+    }
+
+    @include desktop {
+      align-self: center;
+      margin-top: 73px;
+    }
+
+    width: 80px;
+    height: 80px;
+    background: none;
+    border: none;
+    border: 1px solid $black;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &-icon {
+      width: 10px;
+      height: 26px;
+    }
+  }
 }

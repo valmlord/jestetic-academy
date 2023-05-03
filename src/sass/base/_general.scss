@@ -5,6 +5,14 @@
   font-family: 'Futura PT', sans-serif;
 }
 
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+
 a {
   text-decoration: none;
 }
@@ -20,18 +28,18 @@ h6 {
 }
 
 .container {
+  padding: 0 10px;
+
+  @include tablet {
+    padding: 0 34px;
+  }
+
   @include desktop {
     display: block;
     width: 1170px;
     margin: 0 auto;
     padding: 0 34px;
   }
-
-  @include tablet {
-    padding: 0 34px;
-  }
-
-  padding: 0 10px;
 }
 
 .sign {
@@ -39,16 +47,17 @@ h6 {
 }
 
 .decorarion {
-  position: absolute;
-  bottom: -25px;
-  left: 0;
-  color: $accent;
-  white-space: nowrap;
-  overflow: visible;
-  opacity: 0.35;
   @include tablet {
     font: $decor-big;
   }
+
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  overflow: visible;
+  white-space: nowrap;
+  color: $accent;
+  opacity: 0.35;
 }
 
 .decor {
@@ -59,50 +68,56 @@ h6 {
     font: $desktop-title;
     text-transform: uppercase;
     white-space: nowrap;
+
     i {
       font: inherit;
-      text-transform: lowercase;
       font-style: italic;
+      text-transform: lowercase;
     }
 
     &--first {
-      top: 0;
-      left: -280px;
       @include desktop {
         left: 0;
       }
+
+      top: 0;
+      left: -280px;
     }
 
     &--second {
-      top: 80px;
-      left: -400px;
       @include desktop {
         left: -70px;
       }
+
+      top: 80px;
+      left: -400px;
     }
 
     &--third {
-      top: 160px;
-      left: -350px;
       @include desktop {
         left: -15px;
       }
+
+      top: 160px;
+      left: -350px;
     }
 
     &--fourth {
-      top: 240px;
-      left: -730px;
       @include desktop {
         left: -470px;
       }
+
+      top: 240px;
+      left: -730px;
     }
 
     &--fifth {
-      top: 320px;
-      left: -100px;
       @include desktop {
         left: 156px;
       }
+
+      top: 320px;
+      left: -100px;
     }
   }
 }

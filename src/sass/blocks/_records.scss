@@ -1,13 +1,13 @@
 .records {
-  overflow: hidden;
-  padding-top: 115px;
-  padding-bottom: 470px;
-  position: relative;
-
   @include tablet {
     padding-top: 152px;
     padding-bottom: 530px;
   }
+
+  position: relative;
+  padding-top: 115px;
+  padding-bottom: 470px;
+  overflow: hidden;
 
   &__headline {
     text-align: center;
@@ -18,14 +18,15 @@
   }
 
   &__items {
-    display: flex;
-    flex-direction: column;
-    margin-top: 7px;
     @include desktop {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
     }
+
+    display: flex;
+    flex-direction: column;
+    margin-top: 7px;
   }
 
   &__item {
@@ -35,8 +36,6 @@
     text-align: left;
 
     &-img {
-      width: 100%;
-      max-width: 338px;
       @include tablet {
         width: 100%;
         max-width: 100%;
@@ -47,31 +46,38 @@
       @include desktop {
         max-width: 350px;
       }
+
+      width: 100%;
+      max-width: 338px;
     }
+
     &-title {
       margin-top: 20px;
       font: $records-title;
       font-weight: bold;
     }
+
     &-description {
-      margin-top: 8px;
-      font: $mobile-text;
       @include tablet {
         max-width: 357px;
         font: $desktop-text;
       }
+
+      margin-top: 8px;
+      font: $mobile-text;
     }
 
     &-link {
-      display: block;
-      margin-top: 15px;
-      color: $black;
-      font: $mobile-text;
-      font-weight: bold;
       @include tablet {
         align-self: flex-start;
         margin-top: 11px;
       }
+
+      display: block;
+      margin-top: 15px;
+      font: $mobile-text;
+      font-weight: bold;
+      color: $black;
     }
 
     &-icon {
@@ -83,9 +89,10 @@
   }
 
   &__decor {
-    margin-top: 79px;
     @include tablet {
       margin-top: 134px;
     }
+
+    margin-top: 79px;
   }
 }

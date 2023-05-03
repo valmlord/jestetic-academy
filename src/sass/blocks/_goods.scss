@@ -1,56 +1,62 @@
 .goods {
+  position: relative;
   z-index: 2;
   overflow: hidden;
-  position: relative;
+
   &__wrapper {
-    display: flex;
-    flex-direction: column;
-    padding-top: 54px;
-    padding-bottom: 100px;
     @include tablet {
       padding-top: 151px;
       padding-bottom: 244px;
     }
+
     @include desktop {
-      flex-direction: row;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       padding-top: 158px;
       padding-bottom: 231px;
+      flex-direction: row;
     }
+
+    display: flex;
+    flex-direction: column;
+    padding-top: 54px;
+    padding-bottom: 100px;
   }
 
   &__links {
-    display: flex;
-    flex-direction: column;
-    margin-top: 19px;
     @include tablet {
       margin-top: 58px;
     }
+
     @include desktop {
       margin-top: 126px;
     }
+
+    display: flex;
+    flex-direction: column;
+    margin-top: 19px;
   }
 
   &__link {
-    margin-top: 20px;
-    font: $mobile-title;
-    color: $black;
     @include tablet {
       margin-top: 25px;
       font: $desktop-title;
     }
+
+    margin-top: 20px;
+    font: $mobile-title;
+    color: $black;
   }
 
   &__images {
-    margin-top: 48px;
     @include tablet {
       position: relative;
       display: flex;
       align-items: center;
       justify-content: flex-end;
       margin-top: 127px;
-      &:before {
+
+      &::before {
         position: absolute;
         content: url('../img/hero/decor-full.svg');
         top: -143px;
@@ -59,41 +65,42 @@
         transform: rotate3d(3, 2, 0, -177deg);
       }
     }
+
     @include desktop {
       margin-top: 0;
     }
+
+    margin-top: 48px;
   }
 
   &__image {
     &-big {
-      width: 100%;
-      padding: 7px;
-      background: linear-gradient(to bottom, transparent 1px, #000 1px) top
-          right,
-        linear-gradient(to right, transparent 1px, #000 1px) top right,
-        linear-gradient(to top, transparent 1px, #000 1px) top right;
-      background-size: 1px 50%, 50% 1px, 1px 50%;
-      background-repeat: no-repeat;
       @include tablet {
         position: relative;
         width: 100%;
         max-width: 367px;
         margin-left: 31px;
       }
+
+      width: 100%;
+      padding: 7px;
+      background: $top-border;
+      background-repeat: no-repeat;
+      background-size: 1px 50%, 50% 1px, 1px 50%;
     }
+
     &-small {
-      display: none;
       @include tablet {
         display: block;
         width: 100%;
         max-width: 188px;
         padding: 7px;
-        background: linear-gradient(to top, transparent 1px, #000 1px) bottom
-            left,
-          linear-gradient(to right, transparent 1px, #000 1px) bottom left;
-        background-size: 1px 50%, 50% 1px;
+        background: white;
         background-repeat: no-repeat;
+        background-size: 1px 50%, 50% 1px;
       }
+
+      display: none;
     }
   }
 }

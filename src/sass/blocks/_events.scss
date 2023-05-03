@@ -1,18 +1,20 @@
 .events {
-  background: $primary;
   position: relative;
   overflow: hidden;
+  background: $primary;
+
   &__wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding-top: 60px;
-    padding-bottom: 97px;
     @include tablet {
       padding-top: 93px;
       padding-bottom: 167px;
     }
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 60px;
+    padding-bottom: 97px;
+    flex-direction: column;
   }
 
   &__headline {
@@ -23,33 +25,22 @@
     align-self: center;
     text-align: center;
   }
-  
+
   &__list {
     display: flex;
     flex-direction: column;
     width: 100%;
 
     &--first {
-      margin-top: 57px;
       @include tablet {
         margin-top: 62px;
       }
+
+      margin-top: 57px;
     }
 
     &--second {
       margin-top: 87px;
-
-      .events__list-header {
-        @include tablet {
-          text-align: right;
-        }
-      }
-
-      .events__list-wrapper {
-        @include desktop {
-          flex-direction: row-reverse;
-        }
-      }
     }
 
     &-wrapper {
@@ -61,13 +52,15 @@
     }
 
     &-header {
+      @include tablet {
+        padding-bottom: 24px;
+        font: $titles;
+        text-align: right;
+      }
+
       font: $subtitle-italic;
       border-bottom: 1px solid $black;
       border-bottom-width: 100%;
-      @include tablet {
-        font: $titles;
-        padding-bottom: 24px;
-      }
     }
 
     &-items {
@@ -77,14 +70,14 @@
     }
 
     &-item {
-      margin-top: 60px;
-
       @include tablet {
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin-top: 52px;
       }
+
+      margin-top: 60px;
     }
 
     &-date {
@@ -92,28 +85,30 @@
     }
 
     &-title {
-      font: $mobile-text;
-      font-weight: bold;
-      margin-top: 30px;
       @include tablet {
         margin-top: 0;
       }
+
+      margin-top: 30px;
+      font: $mobile-text;
+      font-weight: bold;
     }
 
     &-subtitle {
-      font: $desktop-text;
       margin-top: 9px;
+      font: $desktop-text;
     }
 
     &-link {
-      display: block;
-      margin-top: 30px;
-      color: $black;
-      font: $mobile-text;
       @include tablet {
         align-self: flex-start;
         margin-top: 0;
       }
+
+      display: block;
+      margin-top: 30px;
+      font: $mobile-text;
+      color: $black;
     }
 
     &-icon {
@@ -124,28 +119,32 @@
     }
 
     &-image {
-      width: 100%;
       display: block;
+      width: 100%;
       margin: 0 auto;
+
       &--first {
+        @include tablet {
+          max-width: 343px;
+          margin: 0;
+          margin-top: 78px;
+          margin-right: auto;
+        }
+
         max-width: 253px;
         margin-top: 47px;
-        @include tablet {
-          margin: 0;
-          margin-right: auto;
-          margin-top: 78px;
-          max-width: 343px;
-        }
       }
+
       &--second {
-        max-width: 336px;
-        margin-top: 47px;
         @include tablet {
+          max-width: 458px;
           margin: 0;
           margin-top: 90px;
           margin-left: auto;
-          max-width: 458px;
         }
+
+        max-width: 336px;
+        margin-top: 47px;
       }
     }
   }

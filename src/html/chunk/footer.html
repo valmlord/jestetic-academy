@@ -1,15 +1,78 @@
 <footer class="footer">
   <div class="container">
-    <div class="footer__networks">
-      <a class="footer__logo logo" href="#" tabindex="0">
-        @@include('logo.html')
-      </a>
-    </div>
-    <div class="footer__contacts">
-
+    <div class="footer__wrapper">
+      <div class="footer__networks">
+        <a class="footer__networks-logo logo" href="#" tabindex="0">
+          @@include('logo.html')
+        </a>
+        <div class="footer__networks-subscribe subscribe">
+          <h2 class="subscribe__title">Suscríbete a nuestro boletín de noticias</h2>
+          <form class="subscribe__form" onsubmit="return subscribe();">
+            <input class="subscribe__form-input" type="email" id="email" name="email" placeholder="Correo">
+            <button class="subscribe__form-submit" type="submit" value="">
+              <svg class="subscribe__form-icon">
+                <use xlink:href="img/sprites/sprite.svg#arrow-right"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
+        <div class="footer__networks-socials socials">
+          <a href="#" class="socials__link">
+            <svg class="socials__link-icon">
+              <use xlink:href="img/sprites/sprite.svg#whatsapp-icon"></use>
+            </svg>
+          </a>
+          <a href="#" class="socials__link">
+            <svg class="socials__link-icon">
+              <use xlink:href="img/sprites/sprite.svg#instagram-icon"></use>
+            </svg>
+          </a>
+          <a href="#" class="socials__link">
+            <svg class="socials__link-icon">
+              <use xlink:href="img/sprites/sprite.svg#telegram-icon"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <nav class="footer__nav">
+        <h5 class="footer__nav-title">navegación</h5>
+        <ul class="footer__nav-menu nav-menu">
+          <li class="nav-menu__item"><a href="#" class="nav-menu__link">fundador</a></li>
+          <li class="nav-menu__item"><a href="#" class="nav-menu__link">catálogo</a></li>
+          <li class="nav-menu__item"><a href="#" class="nav-menu__link">calendario</a></li>
+          <li class="nav-menu__item"><a href="#" class="nav-menu__link">cursos en el registro</a></li>
+          <li class="nav-menu__item"><a href="#" class="nav-menu__link">formadoras</a></li>
+        </ul>
+      </nav>
+      <nav class="footer__nav">
+        <h5 class="footer__nav-title">tienda</h5>
+        <ul class="footer__nav-menu nav-menu">
+          <li class="nav-menu__item"><a href="#" class="nav-menu__link">productos</a></li>
+          <li class="nav-menu__item"><a href="#" class="nav-menu__link">dispositivos</a></li>
+          <li class="nav-menu__item"><a href="#" class="nav-menu__link">catalogo aparatologia</a></li>
+        </ul>
+      </nav>
+      <div class="footer__contacts contacts">
+        <div class="contacts__column">
+          <h6 class="contacts__title">contactos</h6>
+          <a class="contacts__link-email" href="mailto:info@jesteticacademy.com">info@jesteticacademy.com</a>
+          <a class="contacts__link-phone" href="tel:34633423238">+34 600 72 74 92</a>
+          <a class="contacts__link-phone" href="tel:34633423238">+34 633 42 32 38</a>
+        </div>
+        <button class="contacts__scroll" src="#">
+          <svg class="contacts__scroll-icon">
+            <use xlink:href="img/sprites/sprite.svg#scroll-arrow"></use>
+          </svg>
+        </button>
+      </div>
     </div>
     <div class="footer__copyrights">
-
+      <span class="footer__copyrights-info">© All rights reserved</span>
+      <span class="footer__copyrights-info">Política de privacidad de datos personales, todas las imágenes están
+        protegidas.</span>
+      <div class="footer__copyrights-language language">
+        @@include('language.html')
+      </div>
     </div>
   </div>
 </footer>
