@@ -1,0 +1,28 @@
+.success {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 197px;
+    padding-bottom: 224px;
+    @include tablet {
+      padding-top: 448px;
+      padding-bottom: 329px;
+    }
+    @include desktop {
+      padding-bottom: 352px;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font: $cormorant-big;
+    text-transform: uppercase;
+    &-italic {
+      font: inherit;
+      font-style: italic;
+      text-transform: lowercase;
+    }
+  }
+}

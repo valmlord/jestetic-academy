@@ -12,13 +12,25 @@
 
   .swiper {
     padding: 0 10px;
+    @include tablet {
+      padding: 0 34px;
+    }
     &-slide {
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
       align-items: flex-start;
       margin-top: 41px;
+      @include tablet {
+        max-width: 711px;
+        height: 402px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-shrink: 0;
+      }
       &__image {
-        width: 100%;
+        width: 301px;
+        height: 377px;
         padding: 8px;
         background: $two-borders-reversed;
         background-repeat: no-repeat;
@@ -28,6 +40,11 @@
       &__description {
         margin-top: 48px;
         margin-left: 10px;
+        max-width: 243px;
+        @include tablet {
+          margin-left: 48px;
+          margin-top: 0;
+        }
       }
 
       &__qualification {
@@ -75,6 +92,13 @@
       max-width: 144px;
       margin-top: 60px;
       margin-left: 10px;
+      cursor: pointer;
+      @include desktop {
+        position: absolute;
+        top: 110px;
+        right: 420px;
+        width: 144px;
+      }
 
       &-next,
       &-prev {

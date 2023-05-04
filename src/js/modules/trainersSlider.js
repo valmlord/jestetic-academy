@@ -6,10 +6,15 @@ export default function createSwiper() {
     direction: 'horizontal',
     loop: true,
     effect: 'fade',
-    slidesPerView: 1,
-    spaceBetween: 116,
+    slidesPerView: 'auto',
+    spaceBetween: 20,
+    breakpoints: {
+      768: {
+        slidesPerView: 'auto',
+        spaceBetween: 116,
+      },
+    },
 
-    // Navigation arrows
     navigation: {
       nextEl: '.swiper-nav__next',
       prevEl: '.swiper-nav__prev',
