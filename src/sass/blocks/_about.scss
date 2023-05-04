@@ -2,6 +2,12 @@
   background: $secondary;
 
   &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 42px;
+    padding-bottom: 60px;
+
     @include tablet {
       padding-top: 62px;
       padding-bottom: 91px;
@@ -15,12 +21,6 @@
       padding-bottom: 30px;
       flex-direction: row;
     }
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 42px;
-    padding-bottom: 60px;
   }
 
   &__image {
@@ -29,24 +29,25 @@
   }
 
   &__description {
+    margin-top: 40px;
+
     @include tablet {
       margin-top: 60px;
     }
 
-    margin-top: 40px;
-  }
+    &-info {
+      margin-top: 18px;
+      font: $futura-small;
+      text-transform: lowercase;
 
-  &__info {
-    @include tablet {
-      margin-top: 34px;
-      font: $desktop-text;
+      @include tablet {
+        margin-top: 34px;
+        font: $futura-medium;
+      }
+
+      @include desktop {
+        max-width: 616px;
+      }
     }
-
-    @include desktop {
-      max-width: 616px;
-    }
-
-    margin-top: 18px;
-    font: $mobile-text;
   }
 }

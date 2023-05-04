@@ -5,16 +5,16 @@
   font-family: 'Futura PT', sans-serif;
 }
 
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: auto;
+main {
+  overflow: hidden;
 }
 
 a {
   text-decoration: none;
+}
+
+li {
+  list-style-type: none;
 }
 
 h1,
@@ -39,85 +39,5 @@ h6 {
     width: 1170px;
     margin: 0 auto;
     padding: 0 34px;
-  }
-}
-
-.sign {
-  font: $decor-small;
-}
-
-.decorarion {
-  @include tablet {
-    font: $decor-big;
-  }
-
-  position: absolute;
-  bottom: -25px;
-  left: 0;
-  overflow: visible;
-  white-space: nowrap;
-  color: $accent;
-  opacity: 0.35;
-}
-
-.decor {
-  position: relative;
-
-  &__line {
-    position: absolute;
-    font: $desktop-title;
-    text-transform: uppercase;
-    white-space: nowrap;
-
-    i {
-      font: inherit;
-      font-style: italic;
-      text-transform: lowercase;
-    }
-
-    &--first {
-      @include desktop {
-        left: 0;
-      }
-
-      top: 0;
-      left: -280px;
-    }
-
-    &--second {
-      @include desktop {
-        left: -70px;
-      }
-
-      top: 80px;
-      left: -400px;
-    }
-
-    &--third {
-      @include desktop {
-        left: -15px;
-      }
-
-      top: 160px;
-      left: -350px;
-    }
-
-    &--fourth {
-      @include desktop {
-        left: -470px;
-      }
-
-      top: 240px;
-      left: -730px;
-    }
-
-    &--fifth {
-      @include desktop {
-        left: 156px;
-      }
-
-      top: 320px;
-      left: -100px;
-    }
   }
 }

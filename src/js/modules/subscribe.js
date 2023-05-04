@@ -1,5 +1,5 @@
 function subscribe() {
-  var email = document.getElementById('email').value;
+  let email = document.getElementById('email').value;
   if (email == '') {
     alert('Введите адрес электронной почты!');
     return false;

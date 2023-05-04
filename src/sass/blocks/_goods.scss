@@ -40,11 +40,12 @@
   &__link {
     @include tablet {
       margin-top: 25px;
-      font: $desktop-title;
+      font: $cormorant-big;
+      font-weight: 400;
     }
 
     margin-top: 20px;
-    font: $mobile-title;
+    font: $cormorant-mobile;
     color: $black;
   }
 
@@ -101,6 +102,16 @@
       }
 
       display: none;
+    }
+  }
+
+  &__handwritten {
+    &-text {
+      top: -44px;
+      left: 0;
+      @include tablet {
+        top: -94px;
+      }
     }
   }
 }

@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 99999;
+  z-index: 100;
   width: 100%;
   background: $white;
   transition: all 0.6s ease;
@@ -191,7 +191,7 @@
       &-link {
         @include desktop {
           position: relative;
-          font: normal 400 18px/23px 'Futura PT', sans-serif;
+          font: $futura-medium;
           text-transform: lowercase;
 
           &::before {
@@ -212,7 +212,7 @@
           }
         }
 
-        font: $mobile-title;
+        font: $cormorant-mobile;
         text-transform: uppercase;
         color: $black;
       }

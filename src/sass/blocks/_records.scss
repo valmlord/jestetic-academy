@@ -48,23 +48,22 @@
       }
 
       width: 100%;
-      max-width: 338px;
     }
 
     &-title {
       margin-top: 20px;
-      font: $records-title;
-      font-weight: bold;
+      font: $futura-big;
+      font-weight: 450;
     }
 
     &-description {
       @include tablet {
         max-width: 357px;
-        font: $desktop-text;
+        font: $futura-medium;
       }
 
       margin-top: 8px;
-      font: $mobile-text;
+      font: $futura-small;
     }
 
     &-link {
@@ -75,8 +74,7 @@
 
       display: block;
       margin-top: 15px;
-      font: $mobile-text;
-      font-weight: bold;
+      font: $futura-small;
       color: $black;
     }
 

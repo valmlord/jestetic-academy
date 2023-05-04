@@ -1,21 +1,21 @@
 .headline {
-  font: $mobile-text;
+  font: $futura-small;
   text-transform: uppercase;
   color: $black;
 }
 
 .title {
-  @include tablet {
-    font: $desktop-title;
-  }
-
   margin-top: 15px;
-  font: $mobile-title;
+  font: $cormorant-mobile;
   text-transform: uppercase;
   color: $black;
 
   span {
     font: inherit;
     font-style: italic;
+  }
+
+  @include tablet {
+    font: $cormorant-big;
   }
 }

@@ -59,8 +59,8 @@
     display: none;
 
     &-title {
-      font: $desktop-text;
-      font-weight: bold;
+      font: $futura-medium;
+      font-weight: 450;
     }
 
     &-menu {
@@ -81,7 +81,7 @@
 
       &__link {
         margin-top: 25px;
-        font: $desktop-text;
+        font: $futura-medium;
         color: $black;
       }
     }
@@ -109,13 +109,12 @@
       align-items: flex-start;
       justify-content: space-between;
       margin-top: 74px;
-      font: $futura-medium;
       flex-direction: row;
     }
 
     display: flex;
     margin-top: 49px;
-    font: $desktop-text;
+    font: $futura-medium;
     color: $black;
     flex-direction: column;
 
@@ -146,8 +145,8 @@
 
 .subscribe {
   &__title {
-    font: $desktop-text;
-    font-weight: bold;
+    font: $futura-medium;
+    font-weight: 450;
   }
 
   &__form {
@@ -160,7 +159,7 @@
 
     &-input {
       flex-basis: 80%;
-      font: $mobile-text;
+      font: $futura-small;
       color: $black;
       border: none;
     }
@@ -214,8 +213,8 @@
   }
 
   &__title {
-    font: $desktop-text;
-    font-weight: bold;
+    font: $futura-medium;
+    font-weight: 450;
   }
 
   &__link {
@@ -228,12 +227,12 @@
 
       margin-top: 26px;
       margin-bottom: 20px;
-      font: $desktop-text;
+      font: $futura-medium;
       color: $black;
     }
 
     &-phone {
-      font: $desktop-text;
+      font: $futura-medium;
       color: $black;
     }
   }

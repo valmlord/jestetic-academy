@@ -2,53 +2,52 @@
   padding-top: 78px;
   padding-bottom: 81px;
   background: $secondary;
+  position: relative;
 
   &__subtitle {
     margin-top: 14px;
-    font: $mobile-text;
+    font: $futura-small;
     text-transform: lowercase;
   }
 
-  .slider {
-    display: flex;
-    flex-direction: column;
-
-    &__item {
-      &-image {
+  .swiper {
+    padding: 0 10px;
+    &-slide {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 41px;
+      &__image {
         width: 100%;
-        margin-top: 41px;
         padding: 8px;
-        background: linear-gradient(to right, #000 1px, transparent 1px) 0 0,
-          linear-gradient(to left, #000 1px, transparent 1px) 100% 100%,
-          linear-gradient(to bottom, #000 1px, transparent 1px) 0 0,
-          linear-gradient(to top, #000 1px, transparent 1px) 100% 100%;
+        background: $two-borders-reversed;
         background-repeat: no-repeat;
-        background-size: 50% 50%;
+        background-size: 46% 47%;
       }
 
-      &-description {
-        padding-left: 10px;
-      }
-
-      &-qualification {
+      &__description {
         margin-top: 48px;
-        font: $decor;
+        margin-left: 10px;
+      }
+
+      &__qualification {
+        font: $handwritten-small;
         text-transform: lowercase;
         color: $black;
       }
 
-      &-name {
-        font: $subtitle-normal;
+      &__name {
+        font: $cormorant-small;
       }
 
-      &-certificate {
+      &__certificate {
         margin-top: 5px;
-        font: $mobile-text;
+        font: $futura-small;
         color: $light-black;
         border-bottom: 1px solid $black;
       }
 
-      &-info {
+      &__info {
         margin-top: 19px;
 
         &:first-of-type {
@@ -56,25 +55,26 @@
         }
 
         h5 {
-          font: $desktop-text;
+          font: $futura-medium;
           color: $black;
         }
 
         p,
         a {
-          font: $mobile-text;
+          font: $futura-small;
           text-transform: uppercase;
           color: $light-black;
         }
       }
     }
 
-    &__nav {
+    &-nav {
+      position: relative;
       display: flex;
       justify-content: space-between;
       max-width: 144px;
       margin-top: 60px;
-      padding-left: 10px;
+      margin-left: 10px;
 
       &-next,
       &-prev {
@@ -90,7 +90,3 @@
     }
   }
 }
-
-// .slider__item-image {
-//   max-width: 100%;
-// }

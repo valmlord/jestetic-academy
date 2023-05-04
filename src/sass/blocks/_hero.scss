@@ -3,6 +3,7 @@
   overflow: hidden;
 
   &__wrapper {
+    padding-top: 182px;
     @include tablet {
       padding-top: 201px;
       padding-bottom: 82px;
@@ -15,17 +16,18 @@
       padding-top: 282px;
       padding-bottom: 143px;
     }
-
-    padding-top: 182px;
   }
 
   &__promo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
     @include desktop {
       position: absolute;
       left: 0;
       width: 100%;
       overflow: visible;
-
       &::before {
         position: absolute;
         content: url('../img/hero/decor-full.svg');
@@ -36,48 +38,48 @@
       }
     }
 
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-  }
+    &-title {
+      font: $cormorant-mobile;
+      text-transform: uppercase;
 
-  &__sign {
-    @include tablet {
-      position: absolute;
-      top: 150px;
-      left: 390px;
-      margin: 0;
-      font: $decor-small;
+      span {
+        font: inherit;
+        font-style: italic;
+      }
+
+      @include tablet {
+        position: relative;
+        max-width: 638px;
+        font: $cormorant-big;
+      }
     }
 
-    @include desktop {
-      bottom: 37%;
-      left: 400px;
-    }
+    &-sign {
+      margin-top: 8px;
+      text-transform: lowercase;
+      color: $black;
+      font: $handwritten-medium;
 
-    margin-top: 8px;
-    text-transform: lowercase;
-    color: $black;
-  }
+      @include tablet {
+        position: absolute;
+        top: 150px;
+        left: 390px;
+        margin: 0;
+      }
 
-  &__title {
-    @include tablet {
-      position: relative;
-      max-width: 638px;
-      font: $desktop-title;
-    }
-
-    font: $mobile-title;
-    text-transform: uppercase;
-
-    span {
-      font: inherit;
-      font-style: italic;
+      @include desktop {
+        bottom: 37%;
+        left: 400px;
+      }
     }
   }
 
   &__gallery {
+    position: relative;
+    margin-top: 50px;
+    padding-bottom: 53px;
+    overflow: hidden;
+
     @include tablet {
       display: flex;
       align-items: flex-end;
@@ -107,46 +109,41 @@
       }
     }
 
-    position: relative;
-    margin-top: 50px;
-    padding-bottom: 53px;
-    overflow: hidden;
-  }
+    &-image {
+      &--first {
+        float: right;
+        width: 74%;
 
-  &__image {
-    &-first {
-      @include tablet {
-        float: none;
-        width: 96%;
-        height: auto;
-        margin-bottom: 12px;
+        @include tablet {
+          float: none;
+          width: 96%;
+          height: auto;
+          margin-bottom: 12px;
+        }
+
+        @include desktop {
+          margin-bottom: -68px;
+        }
       }
 
-      @include desktop {
-        margin-bottom: -68px;
+      &--second {
+        float: left;
+        width: 67%;
+        margin-top: 25px;
+        padding: 7px;
+        background: $two-borders;
+        background-repeat: no-repeat;
+        background-size: 49% 50%;
+
+        @include tablet {
+          float: none;
+          width: 96%;
+          height: auto;
+          margin-top: 0;
+          padding: 12px;
+          background-size: 48% 49%;
+        }
       }
-
-      float: right;
-      width: 74%;
-    }
-
-    &-second {
-      @include tablet {
-        float: none;
-        width: 96%;
-        height: auto;
-        margin-top: 0;
-        padding: 12px;
-        background-size: 48% 49%;
-      }
-
-      float: left;
-      width: 67%;
-      margin-top: 25px;
-      padding: 7px;
-      background: $two-borders;
-      background-repeat: no-repeat;
-      background-size: 49% 50%;
     }
   }
 
@@ -157,9 +154,9 @@
 
     &--first {
       @include tablet {
-        top: 782px;
-        left: 30%;
-        transform: rotate(18deg);
+        top: 584px;
+        left: 22%;
+        transform: rotate(10deg);
       }
 
       position: absolute;

@@ -12,6 +12,12 @@ $two-borders: linear-gradient(to right, #000 1px, transparent 1px) 0 0,
   linear-gradient(to bottom, #000 1px, transparent 1px) 0 0,
   linear-gradient(to top, #000 1px, transparent 1px) 100% 100%;
 
+$two-borders-reversed: linear-gradient(to left, #000 1px, transparent 1px) top
+    right,
+  linear-gradient(to right, #000 1px, transparent 1px) bottom left,
+  linear-gradient(to bottom, #000 1px, transparent 1px) top right,
+  linear-gradient(to top, #000 1px, transparent 1px) bottom left;
+
 $top-border: linear-gradient(to bottom, transparent 1px, #000 1px) top right,
   linear-gradient(to right, transparent 1px, #000 1px) top right,
   linear-gradient(to top, transparent 1px, #000 1px) top right;
@@ -19,42 +25,16 @@ $top-border: linear-gradient(to bottom, transparent 1px, #000 1px) top right,
 $bottom-bottom: linear-gradient(to top, transparent 1px, #000 1px) bottom left,
   linear-gradient(to right, transparent 1px, #000 1px) bottom left;
 
-// Typography
-$mobile-title: 400 41px/52px 'Cormorant', serif;
-$mobile-text: normal 400 16px/21px 'Futura PT', sans-serif;
-$desktop-text: normal 400 18px/23px 'Futura PT', sans-serif;
-$records-title: normal 20px/26px 'Futura PT', sans-serif;
-$desktop-title: 400 64px/78px 'Cormorant', serif;
-$decor-small: 400 64px/76px 'Sansburg Signature', sans-serif;
-$decor-big: 400 128px/153px 'Sansburg Signature', sans-serif;
-$decor: 400 40px/24px 'Sansburg Signature', sans-serif;
-$subtitle-italic: italic 400 40px/49px 'Cormorant', serif;
-$subtitle-normal: normal 400 40px/49px 'Cormorant', serif;
-$titles: italic 400 48px/59px 'Cormorant', serif;
-
 // Updated typography
-$ffutura-small: normal lowercase 400 16px/21px 'Futura PT', sans-serif;
-$ffutura-small: normal uppercase 450 16px/21px 'Futura PT', sans-serif;
-$ffutura-small: normal uppercase 400 16px/21px 'Futura PT', sans-serif;
+$futura-small: 400 16px/21px 'Futura PT', sans-serif;
+$futura-medium: 400 18px/23px 'Futura PT', sans-serif;
+$futura-big: 20px/26px 'Futura PT', sans-serif;
 
-$futura-medium: normal 450 18px/23px 'Futura PT', sans-serif;
-$futura-medium: normal 400 18px/23px 'Futura PT', sans-serif;
+$cormorant-mobile: 400 41px/52px 'Cormorant', serif;
+$cormorant-small: 400 40px/48px 'Cormorant', serif;
+$cormorant-medium: 400 48px/58px 'Cormorant', serif;
+$cormorant-big: 400 64px/78px 'Cormorant', serif;
 
-$ffffutura-big: normal 450 20px/26px 'Futura PT', sans-serif;
-
-$cormorant-mobile: normal uppercase 400 41px/52px 'Cormorant', serif;
-
-$cormorant-small: italic lowercase 400 40px/48px 'Cormorant', serif;
-$cormorant-small: normal lowercase 400 40px/48px 'Cormorant', serif;
-
-$cormorant-medium: normal 400 48px/58px 'Cormorant', serif;
-$cormorant-medium: italic lowercase 400 48px/58px 'Cormorant', serif;
-
-$cormorant-big: normal uppercase 400 64px/78px 'Cormorant', serif;
-$cormorant-big: italic 400 64px/78px 'Cormorant', serif;
-
-$handwritten-small: normal lowercase 400 40px/24px 'Sansburg Signature',
-  sans-serif;
-$handwritten-medium: normal lowercase 400 64px/76px 'Sansburg Signature',
-  sans-serif;
-$handwritten-big: normal 400 128px/153px 'Sansburg Signature', sans-serif;
+$handwritten-small: 400 40px/24px 'Sansburg Signature', sans-serif;
+$handwritten-medium: 400 64px/76px 'Sansburg Signature', sans-serif;
+$handwritten-big: 400 128px/153px 'Sansburg Signature', sans-serif;

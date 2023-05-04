@@ -1,0 +1,76 @@
+.handwritten-text {
+  position: relative;
+  height: 0;
+  z-index: 10;
+  &__block {
+    font: $handwritten-medium;
+    white-space: nowrap;
+    color: $accent;
+    opacity: 0.35;
+    @include tablet {
+      font: $handwritten-big;
+    }
+  }
+}
+
+.decor {
+  position: relative;
+
+  &__line {
+    position: absolute;
+    font: $cormorant-big;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    i {
+      font: inherit;
+      font-style: italic;
+      text-transform: lowercase;
+    }
+
+    &--first {
+      @include desktop {
+        left: 0;
+      }
+
+      top: 0;
+      left: -280px;
+    }
+
+    &--second {
+      @include desktop {
+        left: -70px;
+      }
+
+      top: 80px;
+      left: -400px;
+    }
+
+    &--third {
+      @include desktop {
+        left: -15px;
+      }
+
+      top: 160px;
+      left: -350px;
+    }
+
+    &--fourth {
+      @include desktop {
+        left: -470px;
+      }
+
+      top: 240px;
+      left: -730px;
+    }
+
+    &--fifth {
+      @include desktop {
+        left: 156px;
+      }
+
+      top: 320px;
+      left: -100px;
+    }
+  }
+}
