@@ -3,157 +3,181 @@
   overflow: hidden;
   background: $primary;
 
-  &__wrapper {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    padding-bottom: 97px;
+
     @include tablet {
       padding-top: 93px;
       padding-bottom: 167px;
     }
 
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    padding-top: 60px;
-    padding-bottom: 97px;
-    flex-direction: column;
+    @include desktop {
+      padding-top: 124px;
+      padding-bottom: 235px;
+    }
   }
 
-  &__headline {
-    align-self: center;
-  }
-
-  &__title {
-    align-self: center;
-    text-align: center;
-  }
-
-  &__list {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-
-    &--first {
-      @include tablet {
-        margin-top: 62px;
-      }
-
-      margin-top: 57px;
+  .content-events {
+    &__headline {
+      text-align: center;
     }
 
-    &--second {
-      margin-top: 87px;
+    &__title {
+      margin-top: 15px;
+      text-align: center;
     }
 
-    &-wrapper {
-      @include desktop {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        &--reversed {
-          flex-direction: row-reverse;
-        }
-      }
-    }
-
-    &-header {
-      @include tablet {
-        padding-bottom: 24px;
-        font: $cormorant-medium;
-        &--left {
-          text-align: left;
-        }
-        &--right {
-          text-align: right;
-        }
-      }
-      font: $cormorant-small;
-      font-style: italic;
-      border-bottom: 1px solid $black;
-      border-bottom-width: 100%;
-    }
-
-    &-items {
-      @include desktop {
-        flex-basis: 64%;
-      }
-    }
-
-    &-item {
-      @include tablet {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-top: 52px;
-      }
-
-      margin-top: 60px;
-    }
-
-    &-date {
-      font: $cormorant-small;
-    }
-
-    &-title {
-      @include tablet {
-        margin-top: 0;
-      }
-
-      margin-top: 30px;
-      font: $futura-small;
-      font-weight: 450;
-    }
-
-    &-subtitle {
-      margin-top: 9px;
-      font: $futura-medium;
-      font-weight: 450;
-    }
-
-    &-link {
-      @include tablet {
-        align-self: flex-start;
-        margin-top: 0;
-      }
-
-      display: block;
-      margin-top: 30px;
-      font: $futura-small;
-      color: $black;
-    }
-
-    &-icon {
-      display: inline-block;
-      width: 35px;
-      height: 10px;
-      margin-left: 19px;
-    }
-
-    &-image {
-      display: block;
+    &__list {
+      display: flex;
+      flex-direction: column;
       width: 100%;
-      margin: 0 auto;
 
-      &--first {
+      &--left {
+        margin-top: 57px;
+
         @include tablet {
-          max-width: 343px;
-          margin: 0;
-          margin-top: 78px;
-          margin-right: auto;
+          margin-top: 62px;
         }
 
-        max-width: 253px;
-        margin-top: 47px;
+        @include desktop {
+          margin-top: 79px;
+        }
       }
 
-      &--second {
-        @include tablet {
-          max-width: 458px;
-          margin: 0;
-          margin-top: 90px;
-          margin-left: auto;
+      &--right {
+        margin-top: 87px;
+
+        @include desktop {
+          margin-top: 53px;
+        }
+      }
+
+      .events-list {
+        &__title {
+          font: $cormorant-small;
+          font-style: italic;
+          border-bottom: 1px solid $black;
+          padding-bottom: 9px;
+
+          @include tablet {
+            padding-bottom: 24px;
+            font: $cormorant-medium;
+            font-style: italic;
+            &--left {
+              text-align: left;
+            }
+            &--right {
+              text-align: right;
+            }
+          }
         }
 
-        max-width: 336px;
-        margin-top: 47px;
+        &__content {
+          @include desktop {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            &--right {
+              flex-direction: row-reverse;
+            }
+          }
+        }
+
+        &__items {
+          @include desktop {
+            flex-basis: 64%;
+          }
+        }
+
+        &__item {
+          margin-top: 60px;
+          @include tablet {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 52px;
+          }
+
+          .list-item {
+            &__date {
+              font: $cormorant-small;
+            }
+
+            &__description {
+              &-title {
+                margin-top: 30px;
+                font: $futura-small;
+                font-weight: 450;
+
+                @include tablet {
+                  margin-top: 0;
+                }
+              }
+
+              &-subtitle {
+                margin-top: 9px;
+                font: $futura-medium;
+                font-weight: 400;
+              }
+            }
+
+            &__link {
+              display: block;
+              margin-top: 30px;
+              font: $futura-small;
+              color: $black;
+
+              @include tablet {
+                align-self: flex-start;
+                margin-top: 0;
+              }
+
+              &-icon {
+                display: inline-block;
+                width: 35px;
+                height: 10px;
+                margin-left: 19px;
+              }
+            }
+          }
+        }
+
+        &__image {
+          display: block;
+          width: 100%;
+          margin: 0 auto;
+
+          &--left {
+            max-width: 253px;
+            margin-top: 47px;
+
+            @include tablet {
+              max-width: 343px;
+              margin: 0;
+              margin-top: 78px;
+              margin-right: auto;
+            }
+
+            @include desktop {
+              margin-top: 97px;
+            }
+          }
+
+          &--right {
+            max-width: 336px;
+            margin-top: 47px;
+
+            @include tablet {
+              max-width: 458px;
+              margin: 0;
+              margin-top: 90px;
+              margin-left: auto;
+            }
+          }
+        }
       }
     }
   }

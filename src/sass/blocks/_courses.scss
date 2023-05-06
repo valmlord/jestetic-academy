@@ -1,38 +1,51 @@
 .courses {
   position: relative;
   overflow: hidden;
-  padding-top: 115px;
-  padding-bottom: 470px;
 
-  @include tablet {
-    padding-top: 152px;
-    padding-bottom: 530px;
-  }
+  &__content {
+    padding-top: 115px;
+    padding-bottom: 470px;
 
-  @include desktop {
-    padding-top: 147px;
-  }
-
-  &__headline {
-    text-align: center;
-  }
-
-  &__title {
-    margin-top: 15px;
-    text-align: center;
-  }
-
-  &__list {
-    display: flex;
-    flex-direction: column;
-    margin-top: 7px;
+    @include tablet {
+      padding-top: 152px;
+      padding-bottom: 530px;
+    }
 
     @include desktop {
+      padding-top: 147px;
+    }
+  }
+
+  .content-courses {
+    &__headline {
+      text-align: center;
+    }
+
+    &__title {
+      margin-top: 15px;
+      text-align: center;
+    }
+
+    &__list {
       display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      margin-top: 10px;
+      flex-direction: column;
+      margin-top: 7px;
+
+      @include desktop {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 10px;
+      }
+    }
+
+    &__decor {
+      margin-top: 79px;
+
+      @include tablet {
+        margin-top: 134px;
+      }
     }
   }
 
@@ -91,14 +104,6 @@
           margin-left: 19px;
         }
       }
-    }
-  }
-
-  &__decor {
-    margin-top: 79px;
-
-    @include tablet {
-      margin-top: 134px;
     }
   }
 }
