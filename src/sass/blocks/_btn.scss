@@ -30,14 +30,14 @@
     margin-top: 26px;
   }
 
-  &-records {
-    @include desktop {
-      margin-top: 68px;
-    }
-
+  &-courses {
     display: block;
     margin: 0 auto;
     margin-top: 50px;
+
+    @include desktop {
+      margin-top: 68px;
+    }
   }
 
   &-success {

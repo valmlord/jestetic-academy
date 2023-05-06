@@ -1,0 +1,104 @@
+.courses {
+  position: relative;
+  overflow: hidden;
+  padding-top: 115px;
+  padding-bottom: 470px;
+
+  @include tablet {
+    padding-top: 152px;
+    padding-bottom: 530px;
+  }
+
+  @include desktop {
+    padding-top: 147px;
+  }
+
+  &__headline {
+    text-align: center;
+  }
+
+  &__title {
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 7px;
+
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+  }
+
+  .courses {
+    &-item {
+      display: flex;
+      flex-direction: column;
+      margin-top: 50px;
+      text-align: left;
+
+      &__img {
+        width: 100%;
+
+        @include tablet {
+          width: 100%;
+          max-width: 100%;
+          max-height: 440px;
+          object-fit: cover;
+        }
+
+        @include desktop {
+          max-width: 350px;
+        }
+      }
+
+      &__title {
+        margin-top: 20px;
+        font: $futura-big;
+        font-weight: 450;
+      }
+
+      &__description {
+        margin-top: 8px;
+        font: $futura-small;
+        @include tablet {
+          max-width: 357px;
+          font: $futura-medium;
+        }
+      }
+
+      &__link {
+        display: block;
+        margin-top: 15px;
+        font: $futura-small;
+        color: $black;
+
+        @include tablet {
+          align-self: flex-start;
+          margin-top: 11px;
+        }
+
+        &-icon {
+          display: inline-block;
+          width: 35px;
+          height: 10px;
+          margin-left: 19px;
+        }
+      }
+    }
+  }
+
+  &__decor {
+    margin-top: 79px;
+
+    @include tablet {
+      margin-top: 134px;
+    }
+  }
+}
