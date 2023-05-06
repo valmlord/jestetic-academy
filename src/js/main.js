@@ -3,6 +3,7 @@ import createSwiper from './modules/trainersSlider';
 import openMenu from './modules/openMenu';
 import makeSearch from './modules/makeSearch';
 import changeLang from './modules/changeLang';
+import smoothScroll from './modules/smoothScroll';
 
 window.addEventListener('DOMContentLoaded', () => {
   makeSearch(
@@ -15,4 +16,5 @@ window.addEventListener('DOMContentLoaded', () => {
   openMenu();
   changeLang();
   createSwiper();
+  smoothScroll('.footer__contacts-scroll');
 });

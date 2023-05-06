@@ -48,6 +48,9 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        &--reversed {
+          flex-direction: row-reverse;
+        }
       }
     }
 
@@ -55,18 +58,13 @@
       @include tablet {
         padding-bottom: 24px;
         font: $cormorant-medium;
-        text-align: right;
-      }
-
-      @include desktop {
-        &:first-child {
+        &--left {
           text-align: left;
         }
-        &:nth-child(2) {
+        &--right {
           text-align: right;
         }
       }
-
       font: $cormorant-small;
       font-style: italic;
       border-bottom: 1px solid $black;
@@ -156,16 +154,6 @@
 
         max-width: 336px;
         margin-top: 47px;
-      }
-    }
-  }
-
-  &__handwritten {
-    &-text {
-      top: -44px;
-      left: 0;
-      @include tablet {
-        top: -94px;
       }
     }
   }

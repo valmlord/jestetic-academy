@@ -1,116 +1,121 @@
 .goods {
   position: relative;
-  z-index: 2;
   overflow: hidden;
 
-  &__wrapper {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 54px;
+    padding-bottom: 100px;
+
     @include tablet {
       padding-top: 151px;
       padding-bottom: 244px;
     }
 
     @include desktop {
-      align-items: center;
+      flex-direction: row;
       justify-content: space-between;
+      align-items: center;
       padding-top: 158px;
       padding-bottom: 231px;
-      flex-direction: row;
     }
-
-    display: flex;
-    flex-direction: column;
-    padding-top: 54px;
-    padding-bottom: 100px;
   }
 
-  &__links {
-    @include tablet {
-      margin-top: 58px;
-    }
-
-    @include desktop {
-      margin-top: 126px;
-    }
-
-    display: flex;
-    flex-direction: column;
-    margin-top: 19px;
-  }
-
-  &__link {
-    @include tablet {
-      margin-top: 25px;
-      font: $cormorant-big;
-      font-weight: 400;
-    }
-
-    margin-top: 20px;
-    font: $cormorant-mobile;
-    color: $black;
-  }
-
-  &__images {
-    @include tablet {
-      position: relative;
+  .content-goods {
+    &__list {
       display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      margin-top: 127px;
-
-      &::before {
-        position: absolute;
-        content: url('../img/hero/decor-full.svg');
-        top: -143px;
-        right: 34%;
-        z-index: -1;
-        transform: rotate3d(3, 2, 0, -177deg);
-      }
+      flex-direction: column;
     }
 
-    @include desktop {
-      margin-top: 0;
-    }
+    &__images {
+      margin-top: 48px;
 
-    margin-top: 48px;
-  }
-
-  &__image {
-    &-big {
       @include tablet {
         position: relative;
-        width: 100%;
-        max-width: 367px;
-        margin-left: 31px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-top: 127px;
+
+        &::before {
+          position: absolute;
+          content: url('../img/hero/decor-full.svg');
+          top: -127px;
+          right: 36%;
+          z-index: -1;
+          transform: rotate3d(2, 1, 0, -190deg);
+        }
       }
 
-      width: 100%;
-      padding: 7px;
-      background: $top-border;
-      background-repeat: no-repeat;
-      background-size: 1px 50%, 50% 1px, 1px 50%;
-    }
-
-    &-small {
-      @include tablet {
-        display: block;
-        width: 100%;
-        max-width: 188px;
-        padding: 7px;
-        background: white;
-        background-repeat: no-repeat;
-        background-size: 1px 50%, 50% 1px;
+      @include desktop {
+        margin-top: 0;
       }
-
-      display: none;
     }
   }
 
-  &__handwritten {
-    &-text {
-      top: -44px;
-      left: 0;
+  .list-goods {
+    &__links {
+      margin-top: 39px;
       @include tablet {
-        top: -94px;
+        margin-top: 85px;
+      }
+      @include desktop {
+        margin-top: 126px;
+      }
+    }
+
+    &__link {
+      margin-top: 20px;
+      font: $cormorant-mobile;
+      color: $black;
+      display: block;
+      width: auto;
+      transition: 0.6s all;
+      &:first-child {
+        margin-top: 0px;
+      }
+
+      @include tablet {
+        margin-top: 25px;
+        font: $cormorant-big;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .images-goods {
+    &__img {
+      &-main {
+        width: 100%;
+        padding-top: 7px;
+        padding-right: 7px;
+        background: $top-border;
+        background-repeat: no-repeat;
+        background-size: 1px 50%, 50% 1px, 1px 50%;
+
+        @include tablet {
+          position: relative;
+          width: 100%;
+          max-width: 367px;
+          margin-left: 31px;
+        }
+      }
+
+      &-secondary {
+        display: none;
+
+        @include tablet {
+          display: block;
+          margin-top: 120px;
+          width: 100%;
+          max-width: 188px;
+          padding-left: 7px;
+          padding-bottom: 7px;
+          background: $bottom-bottom;
+          background-repeat: no-repeat;
+          background-size: 1px 50%, 50% 1px;
+        }
       }
     }
   }

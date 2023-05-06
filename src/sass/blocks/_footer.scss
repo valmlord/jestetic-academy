@@ -35,6 +35,7 @@
       }
 
       margin-top: 43px;
+      max-width: 340px;
     }
 
     &-socials {
@@ -88,6 +89,8 @@
   }
 
   &__contacts {
+    margin-top: 46px;
+
     @include tablet {
       flex-basis: 36%;
       margin-top: 0;
@@ -101,7 +104,69 @@
       flex-direction: column;
     }
 
-    margin-top: 46px;
+    display: flex;
+    justify-content: space-between;
+
+    &-column {
+      @include tablet {
+        align-items: flex-start;
+        margin-top: 46px;
+      }
+
+      @include desktop {
+        margin-top: 0;
+      }
+
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-title {
+      font: $futura-medium;
+      font-weight: 450;
+    }
+
+    &-email {
+      @include desktop {
+        margin-top: 34px;
+      }
+
+      margin-top: 26px;
+      margin-bottom: 20px;
+      font: $futura-medium;
+      color: $black;
+      cursor: pointer;
+    }
+
+    &-phone {
+      font: $futura-medium;
+      color: $black;
+      cursor: pointer;
+    }
+
+    &-scroll {
+      @include tablet {
+        align-self: flex-end;
+      }
+
+      @include desktop {
+        align-self: center;
+        margin-top: 73px;
+      }
+
+      width: 80px;
+      height: 80px;
+      background: none;
+      border: none;
+      border: 1px solid $black;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    &-icon {
+      width: 10px;
+      height: 26px;
+    }
   }
 
   &__copyrights {
@@ -183,81 +248,13 @@
 
   display: flex;
   justify-content: space-between;
-  width: 50%;
+  width: 30%;
   flex-direction: row;
 
   &__link {
     &-icon {
       width: 25px;
       height: 25px;
-    }
-  }
-}
-
-.contacts {
-  display: flex;
-  justify-content: space-between;
-
-  &__column {
-    @include tablet {
-      align-items: flex-start;
-      margin-top: 46px;
-    }
-
-    @include desktop {
-      margin-top: 0;
-    }
-
-    display: flex;
-    flex-direction: column;
-  }
-
-  &__title {
-    font: $futura-medium;
-    font-weight: 450;
-  }
-
-  &__link {
-    cursor: pointer;
-
-    &-email {
-      @include desktop {
-        margin-top: 34px;
-      }
-
-      margin-top: 26px;
-      margin-bottom: 20px;
-      font: $futura-medium;
-      color: $black;
-    }
-
-    &-phone {
-      font: $futura-medium;
-      color: $black;
-    }
-  }
-
-  &__scroll {
-    @include tablet {
-      align-self: flex-end;
-    }
-
-    @include desktop {
-      align-self: center;
-      margin-top: 73px;
-    }
-
-    width: 80px;
-    height: 80px;
-    background: none;
-    border: none;
-    border: 1px solid $black;
-    border-radius: 50%;
-    cursor: pointer;
-
-    &-icon {
-      width: 10px;
-      height: 26px;
     }
   }
 }

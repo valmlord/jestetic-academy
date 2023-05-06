@@ -1,12 +1,22 @@
-.handwritten-text {
+.handwritten-decoration {
   position: relative;
-  height: 0;
   z-index: 10;
-  &__block {
+  height: 0;
+  &__text {
     font: $handwritten-medium;
     white-space: nowrap;
     color: $accent;
     opacity: 0.35;
+    &--goods,
+    &--events {
+      position: absolute;
+      top: -44px;
+      left: 0;
+      @include tablet {
+        top: -94px;
+      }
+    }
+
     @include tablet {
       font: $handwritten-big;
     }
@@ -29,48 +39,48 @@
     }
 
     &--first {
-      @include desktop {
-        left: 0;
-      }
-
       top: 0;
       left: -280px;
+
+      @include desktop {
+        left: -400px;
+      }
     }
 
     &--second {
-      @include desktop {
-        left: -70px;
-      }
-
       top: 80px;
-      left: -400px;
+      left: -344px;
+
+      @include desktop {
+        left: -466px;
+      }
     }
 
     &--third {
-      @include desktop {
-        left: -15px;
-      }
-
       top: 160px;
-      left: -350px;
+      left: -296px;
+
+      @include desktop {
+        left: -420px;
+      }
     }
 
     &--fourth {
-      @include desktop {
-        left: -470px;
-      }
-
       top: 240px;
-      left: -730px;
+      left: -740px;
+
+      @include desktop {
+        left: -860px;
+      }
     }
 
     &--fifth {
-      @include desktop {
-        left: 156px;
-      }
-
       top: 320px;
-      left: -100px;
+      left: -109px;
+
+      @include desktop {
+        left: -234px;
+      }
     }
   }
 }

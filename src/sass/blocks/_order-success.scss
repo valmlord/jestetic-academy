@@ -1,9 +1,12 @@
 .success {
-  &__wrapper {
+  &__content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+
+  .content-success {
     padding-top: 197px;
     padding-bottom: 224px;
     @include tablet {
@@ -13,16 +16,15 @@
     @include desktop {
       padding-bottom: 352px;
     }
-  }
-
-  &__title {
-    text-align: center;
-    font: $cormorant-big;
-    text-transform: uppercase;
-    &-italic {
-      font: inherit;
-      font-style: italic;
-      text-transform: lowercase;
+    &__title {
+      text-align: center;
+      font: $cormorant-big;
+      text-transform: uppercase;
+      &-italic {
+        font: inherit;
+        font-style: italic;
+        text-transform: lowercase;
+      }
     }
   }
 }

@@ -23,7 +23,7 @@
     "Official Web Page"
   ],
   "author": "Korshukov Stepan",
-  "license": "GPL-3.0-only",
+  "license": "",
   "devDependencies": {
     "@babel/core": "^7.16.0",
     "@babel/preset-env": "^7.16.0",

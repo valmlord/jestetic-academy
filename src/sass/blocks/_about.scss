@@ -1,7 +1,7 @@
 .about {
   background: $secondary;
 
-  &__wrapper {
+  &__content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,27 +15,38 @@
 
     @include desktop {
       display: flex;
-      align-items: center;
+      flex-direction: row;
       justify-content: space-between;
+      align-items: center;
       padding-top: 35px;
       padding-bottom: 30px;
-      flex-direction: row;
     }
   }
 
-  &__image {
-    width: 100%;
-    max-width: 373px;
-  }
+  .content-about {
+    &__image {
+      width: 100%;
+      max-width: 268px;
+      height: auto;
 
-  &__description {
-    margin-top: 40px;
-
-    @include tablet {
-      margin-top: 60px;
+      @include tablet {
+        max-width: 373px;
+      }
     }
 
-    &-info {
+    &__description {
+      margin-top: 40px;
+
+      @include tablet {
+        margin-top: 60px;
+      }
+    }
+
+    &__title {
+      margin-top: 15px;
+    }
+
+    &__info {
       margin-top: 18px;
       font: $futura-small;
       text-transform: lowercase;
