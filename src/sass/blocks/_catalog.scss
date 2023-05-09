@@ -1,4 +1,4 @@
-.goods {
+.catalog {
   position: relative;
   overflow: hidden;
 
@@ -22,7 +22,7 @@
     }
   }
 
-  .content-goods {
+  .content-catalog {
     &__list {
       display: flex;
       flex-direction: column;
@@ -54,7 +54,7 @@
     }
   }
 
-  .list-goods {
+  .list-catalog {
     &__links {
       margin-top: 39px;
       @include tablet {
@@ -84,7 +84,7 @@
     }
   }
 
-  .images-goods {
+  .images-catalog {
     &__img {
       &-main {
         width: 100%;

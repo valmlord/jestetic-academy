@@ -1,12 +1,78 @@
-<div class="search-bar">
-    <div class="container">
+<section class="search">
+  <div class="container">
+    <div class="search__content content-search">
+      <div class="content-search__bar search-bar">
         <form action="/search" method="get">
-            <input type="text" placeholder="search" name="search">
-            <button type="submit">
-                <svg class="submit-icon">
-                    <use xlink:href="/img/sprites/sprite.svg#search-icon"></use>
-                </svg>
-            </button>
+          <input type="text" placeholder="mascarilla" name="search" />
+          <button type="submit">
+            <svg class="submit-icon">
+              <use xlink:href="/img/sprites/sprite.svg#search-icon"></use>
+            </svg>
+          </button>
         </form>
+      </div>
+      <div class="content-search__info search-info">
+        <span class="search-info__request">resultados para "mascarilla"</span>
+        <span class="search-info__counter">2 resultados</span>
+      </div>
+      <ul class="content-products__cards products-cards">
+        <li class="products-cards__item product-card">
+          <div class="product-card__photo">
+            <div
+              class="product-card__photo-img"
+              style="background-image: url(img/products/products-img-6.png)"
+            ></div>
+          </div>
+          <span class="product-card__favorite">
+            <svg class="product-card__favorite-icon">
+              <use xlink:href="img/sprites/sprite.svg#heart-icon"></use>
+            </svg>
+          </span>
+          <div class="product-card__description">
+            <h2 class="product-card__description-name">
+              Doble Piel-mascarilla alginante con sistema molecular de lifting y
+              drenaje
+            </h2>
+            <h3 class="product-card__description-price">10€</h3>
+            <h4 class="product-card__description-count">25g</h4>
+            <button class="btn btn-products" src="#">más detalles</button>
+          </div>
+        </li>
+        <li class="products-cards__item product-card">
+          <div class="product-card__photo">
+            <div
+              class="product-card__photo-img"
+              style="background-image: url(img/products/products-img-7.png)"
+            ></div>
+          </div>
+          <span class="product-card__favorite">
+            <svg class="product-card__favorite-icon">
+              <use xlink:href="img/sprites/sprite.svg#heart-icon"></use>
+            </svg>
+          </span>
+          <div class="product-card__description">
+            <h2 class="product-card__description-name">
+              Carbon detox-mascarilla pure charcoal efecto détox e hidratación
+            </h2>
+            <h3 class="product-card__description-price">12€</h3>
+            <h4 class="product-card__description-count">1 unid</h4>
+            <button class="btn btn-products" src="#">más detalles</button>
+          </div>
+        </li>
+      </ul>
     </div>
-</div>
+  </div>
+</section>
+
+<!-- <div class="search__bar">
+  <div class="container">
+    <form action="/search" method="get">
+      <input type="text" placeholder="search" name="search" />
+      <button type="submit">
+        <svg class="submit-icon">
+          <use xlink:href="/img/sprites/sprite.svg#search-icon"></use>
+        </svg>
+      </button>
+    </form>
+  </div>
+</div> -->

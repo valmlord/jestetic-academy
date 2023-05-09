@@ -1,0 +1,51 @@
+.products {
+  &__content {
+    padding-top: 42px;
+    padding-bottom: 63px;
+    @include tablet {
+      padding-top: 40px;
+      padding-bottom: 149px;
+    }
+  }
+}
+.content-products {
+  &__header {
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+    }
+    &-title {
+      font: $cormorant-mobile;
+      color: $black;
+      text-transform: uppercase;
+      @include tablet {
+        font: $cormorant-big;
+      }
+    }
+
+    &-signature {
+      font: $handwritten-medium;
+      color: $black;
+      text-transform: lowercase;
+    }
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(1, 340px);
+    justify-content: center;
+    align-items: center;
+
+    @include tablet {
+      display: grid;
+      grid-template-columns: repeat(2, 340px);
+      justify-content: space-between;
+    }
+
+    @include desktop {
+      display: grid;
+      grid-template-columns: repeat(3, 340px);
+    }
+  }
+}

@@ -8,7 +8,8 @@
   background-color: $accent;
   border: 1px solid $accent;
   border-radius: 50px;
-  transition: all 0.3s ease;
+  transition: all 0.6s ease;
+  cursor: pointer;
 
   &:hover {
     color: $accent;
@@ -42,5 +43,15 @@
 
   &-success {
     margin-top: 50px;
+  }
+
+  &-products {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.35s ease-in-out, transform 0.35s ease-in-out;
   }
 }

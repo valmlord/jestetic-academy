@@ -1,0 +1,22 @@
+.breadcrumbs {
+  &__content {
+    margin-top: 200px;
+    .content-breadcrumbs {
+      &__list {
+        display: flex;
+        flex-direction: row;
+
+        &-link {
+          font: $futura-small;
+          color: $black;
+          @include tablet {
+            font: $futura-medium;
+          }
+          &--active {
+            color: $active;
+          }
+        }
+      }
+    }
+  }
+}
