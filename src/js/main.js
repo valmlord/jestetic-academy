@@ -4,6 +4,7 @@ import openMenu from './modules/openMenu';
 // import makeSearch from './modules/makeSearch';
 import changeLang from './modules/changeLang';
 import smoothScroll from './modules/smoothScroll';
+import accordion from './modules/accordion';
 
 window.addEventListener('DOMContentLoaded', () => {
   // makeSearch(
@@ -17,4 +18,5 @@ window.addEventListener('DOMContentLoaded', () => {
   changeLang();
   createSwiper();
   smoothScroll('.footer__contacts-scroll');
+  accordion();
 });

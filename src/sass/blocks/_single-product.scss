@@ -1,0 +1,133 @@
+.single-product {
+  &__content {
+    padding-top: 30px;
+    padding-bottom: 104px;
+    @include tablet {
+      padding-top: 50px;
+      padding-bottom: 178px;
+    }
+    @include desktop {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 185px;
+    }
+  }
+
+  .product-content {
+    display: flex;
+    flex-direction: column;
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    &__img {
+      width: 100%;
+      padding: 14px;
+      background: $two-borders;
+      background-repeat: no-repeat;
+      background-size: 49% 49%;
+      @include tablet {
+        padding: 18px;
+      }
+      @include desktop {
+        max-width: 540px;
+        width: 100%;
+        height: 454px;
+      }
+    }
+    &__description {
+      margin-top: 20px;
+      @include tablet {
+        margin-top: 50px;
+      }
+      @include desktop {
+        max-width: 567px;
+        margin-top: 0;
+        margin-left: 70px;
+      }
+    }
+  }
+
+  .product-description {
+    color: $black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &__name {
+      font: $cormorant-medium;
+    }
+    &__price {
+      margin-top: 26px;
+      font: $futura-big;
+      font-weight: 450;
+      @include tablet {
+        margin-top: 29px;
+      }
+    }
+    &__info {
+      margin-top: 30px;
+      font: $futura-small;
+      @include tablet {
+        font: $futura-medium;
+        margin-top: 37px;
+      }
+    }
+
+    &__advantage {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    &__buttons {
+      display: flex;
+      flex-direction: column;
+      margin-top: 25px;
+      @include tablet {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  .product {
+    &-advantage {
+      &__img {
+        width: 75px;
+        height: 81px;
+      }
+  
+      &__text {
+        margin-left: 23px;
+        font: $futura-medium;
+      }
+    }
+
+    &-buttons {
+      &__wishlist {
+        margin-top: 35px;
+        margin-left: 10px;
+        @include tablet {
+          margin: 0;
+        }
+      }
+    } 
+    
+    &-wishlist {
+      display: flex;
+      align-items: flex-start;
+      align-items: center;
+      &__icon {
+        width: 21px;
+        height: 21px;
+      }
+      &__text {
+        margin-left: 16px;
+        font: $futura-medium;
+      }
+    }
+  }
+}

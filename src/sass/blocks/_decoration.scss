@@ -16,6 +16,10 @@
       }
     }
 
+    &--product {
+      left: -194px;
+    }
+
     @include tablet {
       font: $handwritten-big;
     }
