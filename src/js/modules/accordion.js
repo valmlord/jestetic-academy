@@ -2,8 +2,8 @@ const accordion = () => {
   const accordionItems = document.querySelectorAll('.accordion-item');
 
   accordionItems.forEach((item) => {
-    const header = item.querySelector('.accordion-item__header');
-    const content = item.querySelector('.accordion-item__content');
+    const header = item.querySelector('.accordion-item__top');
+    const content = item.querySelector('.accordion-item__bottom');
 
     header.addEventListener('click', () => {
       item.classList.toggle('open');

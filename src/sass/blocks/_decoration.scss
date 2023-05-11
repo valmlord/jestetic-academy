@@ -7,21 +7,25 @@
     white-space: nowrap;
     color: $accent;
     opacity: 0.35;
+    top: -44px;
+    @include tablet {
+      top: -94px;
+      font: $handwritten-big;
+    }
     &--left {
       position: absolute;
-      top: -44px;
       left: 0;
+    }
+
+    &--right {
+      position: absolute;
+      right: 70px;
       @include tablet {
-        top: -94px;
+        right: 220px;
       }
-    }
-
-    &--product {
-      left: -194px;
-    }
-
-    @include tablet {
-      font: $handwritten-big;
+      @include desktop {
+        left: 10px;
+      }
     }
   }
 }
