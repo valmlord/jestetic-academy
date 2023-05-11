@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
   \*************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("__webpack_require__.r(__webpack_exports__);\nconst accordion = () => {\n  const accordionItems = document.querySelectorAll('.accordion-item');\n\n  accordionItems.forEach((item) => {\n    const header = item.querySelector('.accordion-item__header');\n    const content = item.querySelector('.accordion-item__content');\n\n    header.addEventListener('click', () => {\n      item.classList.toggle('open');\n\n      if (item.classList.contains('open')) {\n        content.style.maxHeight = `${content.scrollHeight}px`;\n      } else {\n        content.style.maxHeight = '0';\n      }\n    });\n  });\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (accordion);\n\n\n//# sourceURL=webpack://jestetic-academy/./src/js/modules/accordion.js?");
+eval("__webpack_require__.r(__webpack_exports__);\nconst accordion = () => {\n  const accordionItems = document.querySelectorAll('.accordion-item');\n\n  accordionItems.forEach((item) => {\n    const header = item.querySelector('.accordion-item__top');\n    const content = item.querySelector('.accordion-item__bottom');\n\n    header.addEventListener('click', () => {\n      item.classList.toggle('open');\n\n      if (item.classList.contains('open')) {\n        content.style.maxHeight = `${content.scrollHeight}px`;\n      } else {\n        content.style.maxHeight = '0';\n      }\n    });\n  });\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (accordion);\n\n\n//# sourceURL=webpack://jestetic-academy/./src/js/modules/accordion.js?");
 
 /***/ }),
 
