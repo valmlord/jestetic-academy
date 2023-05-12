@@ -1,0 +1,153 @@
+.course {
+  &__content {
+    padding-top: 30px;
+    padding-bottom: 105px;
+    @include tablet {
+      padding-top: 40px;
+      padding-bottom: 240px;
+    }
+
+    @include desktop {
+      padding-bottom: 184px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: self-start;
+      flex-wrap: wrap;
+    }
+  }
+
+  .content-course {
+    &__title {
+      width: 100%;
+    }
+
+    &__image {
+      position: relative;
+      display: none;
+      @include tablet {
+        display: block;
+        margin: 0 auto;
+        margin-top: 75px;
+        &::before {
+          position: absolute;
+          content: url('../img/hero/decor-full.svg');
+          top: -12px;
+          left: -1%;
+          transform: rotate3d(3, 2, 0, 171deg);
+          z-index: -1;
+        }
+
+        &::after {
+          position: absolute;
+          right: 14px;
+          bottom: -100px;
+          z-index: -1;
+          content: url('../img/hero/decor-full.svg');
+          transform: rotate3d(181, 148, 8, 175deg);
+        }
+      }
+
+      @include desktop {
+        margin: 0;
+        margin-top: 26px;
+        &::before {
+          top: -62px;
+          left: -32%;
+        }
+        &::after {
+          right: -89px;
+        }
+      }
+    }
+
+    &__description {
+      @include desktop {
+        flex-basis: 64%;
+      }
+    }
+  }
+
+  .course-description {
+    &__info {
+      display: flex;
+      flex-direction: column;
+      margin-top: 16px;
+      @include tablet {
+        flex-direction: row;
+        margin-top: 23px;
+      }
+      @include desktop {
+        margin-top: 39px;
+      }
+    }
+
+    &__buttons {
+      display: flex;
+      flex-direction: column;
+      margin-top: 32px;
+      @include tablet {
+        display: flex;
+        flex-direction: row;
+      }
+    }
+
+    &__text {
+      @include tablet {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  .description-info {
+    &__date,
+    &__price {
+      font: $cormorant-mobile;
+      text-transform: lowercase;
+      @include tablet {
+        font: $cormorant-big;
+      }
+    }
+    &__price {
+      @include tablet {
+        margin-left: 61px;
+      }
+    }
+  }
+
+  .description-text {
+    &__headline {
+      margin-top: 50px;
+    }
+    &__item {
+      margin-top: 10px;
+      font: $futura-small;
+      color: $black;
+      @include tablet {
+        font: $futura-medium;
+      }
+    }
+  }
+
+  .course-image {
+    &__item {
+      display: block;
+      margin: 0 auto;
+      @include tablet {
+        width: 100%;
+        max-width: 465px;
+        padding: 17px;
+        background: $two-borders-reversed;
+        background-repeat: no-repeat;
+        background-size: 49% 50%;
+      }
+
+      @include desktop {
+        padding: 13px;
+        max-width: 343px;
+        height: 588px;
+        object-fit: cover;
+      }
+    }
+  }
+}

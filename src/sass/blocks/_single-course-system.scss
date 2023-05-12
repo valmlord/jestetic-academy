@@ -1,0 +1,76 @@
+.course-system {
+  &__content {
+    position: relative;
+    padding-top: 94px;
+    padding-bottom: 405px;
+    @include tablet {
+      padding-top: 113px;
+      &::before {
+        position: absolute;
+        content: url(../img/hero/decor-full.svg);
+        top: 0px;
+        right: -40px;
+        z-index: -1;
+        transform: rotate3d(10, -2, 1, 173deg);
+      }
+    }
+    @include desktop {
+      padding-top: 183px;
+      &::before {
+        top: 150px;
+      }
+    }
+  }
+
+  &__decor {
+    margin-top: 93px;
+    @include desktop {
+      margin-top: 174px;
+    }
+  }
+
+  .system-content {
+    &__steps {
+      margin-top: 18px;
+      @include desktop {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 41px;
+      }
+    }
+  }
+
+  .system-steps {
+    &__item {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      margin-top: 36px;
+      @include desktop {
+        max-width: 406px;
+        &:nth-child(2n + 1) {
+          margin-right: 94px;
+        }
+      }
+    }
+  }
+
+  .system-item {
+    &__number {
+      color: $black;
+      font: $cormorant-big;
+      line-height: 20px;
+      margin-right: 44px;
+    }
+    &__description {
+      font: $futura-small;
+      color: $black;
+      max-width: 310px;
+      @include tablet {
+        max-width: 585px;
+        font: $futura-medium;
+        width: 100%;
+      }
+    }
+  }
+}
