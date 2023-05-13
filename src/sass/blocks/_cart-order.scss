@@ -2,6 +2,9 @@
   &__content {
     padding-top: 229px;
     padding-bottom: 113px;
+    @include desktop {
+      padding-bottom: 169px;
+    }
   }
 
   .order-content {
@@ -17,106 +20,190 @@
 
     &__items {
       margin-top: 17px;
-      border-top: 1px solid $grey;
-      width: 100%;
-      max-width: 340px;
+    }
+
+    &__amount {
+      margin-top: 61px;
     }
   }
 
   .order-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     border-bottom: 1px solid $black;
+    padding-top: 18px;
+    padding-bottom: 24px;
+    &:first-child {
+      border-top: 1px solid $black;
+    }
+    @include tablet {
+      padding-top: 30px;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+    }
+
     &__image {
-      margin-top: 18px;
-      width: 100%;
-      max-width: 340px;
-      max-height: 240px;
+      width: 340px;
+      height: 240px;
       object-fit: cover;
+      @include tablet {
+        width: 270px;
+        max-height: 180px;
+      }
     }
     &__description {
       margin-top: 18px;
-      margin-bottom: 29px;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      justify-content: space-between;
+      @include tablet {
+        margin-top: 0px;
+        margin-left: 30px;
+        width: 100%;
+      }
     }
   }
 
   .item-description {
-    &__info {
-      font: $futura-medium;
-      margin-top: 8px;
-    }
-
-    &__bottom {
-      margin-top: 27px;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
-  }
-
-  .top-description {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    &__name {
-      flex-basis: 80%;
-      font: $futura-big;
-      font-weight: 450;
+    flex-wrap: wrap;
+    width: 100%;
+    &__info {
+      flex-basis: 89%;
+      @include desktop {
+        flex-basis: 50%;
+      }
     }
-    &__btn {
-      text-align: right;
-      font: $futura-small;
-      align-self: flex-start;
-      border-bottom: 1px solid $grey;
-      color: $light-black;
-    }
-  }
 
-  .bottom-description {
+    &__remover {
+      position: relative;
+      font: $futura-small;
+      color: $light-black;
+      text-align: right;
+      height: 20px;
+      border-bottom: 1px solid $light-black;
+      @include desktop {
+        cursor: pointer;
+        order: 3;
+      }
+    }
+
     &__btn {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border: 1px solid $accent;
-      color: $accent;
-      border-radius: 50px;
-      width: 128px;
-      height: 45px;
+      margin-top: 29px;
+      @include desktop {
+        margin-top: 0;
+        order: 2;
+      }
     }
 
     &__date {
       font: $futura-medium;
       color: $black;
+      margin-top: 40px;
+      @include desktop {
+        order: 2;
+        margin-top: 0;
+      }
     }
 
     &__price {
       font: $futura-big;
       font-weight: 450;
+      margin-top: 40px;
+      @include tablet {
+        font-size: 24px;
+      }
+      @include desktop {
+        flex-basis: 100%;
+        order: 4;
+      }
     }
   }
 
-  .bottom-btn {
-    &__dec,
-    &__inc {
-      padding: 13.25px 15px;
-      border-radius: 50px;
-      svg {
-        width: 14.25px;
-        height: 14.25px;
-        stroke: $accent;
-      }
-      &:active {
-        background: $accent;
-        svg {
-          stroke: $white;
-        }
+  .description-info {
+    display: flex;
+    flex-direction: column;
+    &__name {
+      font: $futura-big;
+      font-weight: 450;
+
+      @include tablet {
+        font-size: 24px;
       }
     }
 
-    &__amount {
-      color: $accent;
-      font-size: 12px;
+    &__additional {
+      font: $futura-medium;
+      color: $black;
+      margin-top: 8px;
+    }
+  }
+
+  .order-amount {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    &__promocode {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid $black;
+      padding-bottom: 14px;
+    }
+    &__price {
+      margin-top: 30px;
+      @include tablet {
+        align-items: flex-end;
+        margin-top: 0;
+      }
+    }
+  }
+
+  .order-promocode {
+    display: flex;
+    width: 338px;
+
+    &__input {
+      font: $futura-medium;
+      color: $black;
+      border: none;
+    }
+
+    &__submit {
+      background: none;
+      border: none;
+      &-icon {
+        width: 42px;
+        height: 10px;
+      }
+    }
+  }
+
+  .amount-price {
+    font: $futura-big;
+    font-weight: 450;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include desktop {
+      align-items: flex-start;
+    }
+    &__info {
+      display: flex;
+    }
+  }
+
+  .amount-info {
+    &__count {
+      margin-left: 30px;
     }
   }
 }
