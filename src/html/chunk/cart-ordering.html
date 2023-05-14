@@ -1,0 +1,108 @@
+<section class="cart-ordering">
+    <div class="container">
+        <div class="cart-ordering__content ordering-content">
+            <h1 class="ordering-content__title title">registro de <span>pedidos</span></h1>
+            <div class="ordering-content__steps ordering-steps">
+                <span class="ordering-steps__point">envio</span>
+                <span>
+                    <svg class="ordering-steps__icon">
+                        <use xlink:href="img/sprites/sprite.svg#long-arrow"></use>
+                    </svg>
+                </span>
+                <span class="ordering-steps__point">confirmación</span>
+            </div>
+            <div class="ordering-content__form ordering-form">
+                <form class="ordering-form form" id="order-form" action="#" method="POST">
+                    <h2 class="form__title">Contacto</h2>
+                    <div class="form__fields form-fields">
+                        <input class="form-fields__input" type="text" id="name" name="name" required
+                            placeholder="Nombre *">
+                        <input class="form-fields__input" type="text" id="surname" name="surname" required
+                            placeholder="Apellido *">
+                    </div>
+                    <div class="form__fields form-fields">
+                        <input class="form-fields__input" type="email" id="email" name="email" required
+                            placeholder="Correo *">
+                        <input class="form-fields__input" type="tel" id="phone" name="phone" required
+                            placeholder="Teléfono *">
+                    </div>
+                    <h2 class="form__title">Dirección de envío</h2>
+                    <div class="form__fields form-fields">
+                        <input class="form-fields__input" id="country" name="country" required placeholder="Pais *">
+                        <input class="form-fields__input" type="text" id="city" name="city" required
+                            placeholder="Ciudad *">
+                    </div>
+                    <div class="form__fields form-fields">
+                        <input class="form-fields__input" type="text" id="zipcode" name="zipcode" required
+                            placeholder="Código postal *">
+                        <input class="form-fields__input" id="address" name="address" required
+                            placeholder="Dirección *">
+                    </div>
+                    <!-- <button type="submit">Отправить</button> -->
+                </form>
+                <div class="ordering-form__return form-return">
+                    <svg class="form-return__icon">
+                        <use xlink:href="img/sprites/sprite.svg#arrow-prev"></use>
+                    </svg>
+                    <span class="form-return__text">VOLVER AL CARRITO</span>
+                </div>
+                <div class="ordering-form__list ordering-list">
+                    <div class="ordering-list__header ordering-header">
+                        <h3 class="ordering-header__title">Su pedido</h3>
+                        <a class="ordering-header__editor" href="#">editar orden</a>
+                    </div>
+                    <div class="ordering-list__items order-items">
+                        <div class="order-item">
+                            <img class="order-item__image" src="img/products/products-img-1.png" alt="product-image">
+                            <div class="order-item__description item-description">
+                                <div class="item-description__info description-info">
+                                    <h2 class="description-info__name">Oxybooster-oxigenación y protección solar de las
+                                        células
+                                    </h2>
+                                    <p class="description-info__additional">2ml*10 unidades</p>
+                                </div>
+                                <div class="item-description__remover">quitar</div>
+                                <div class="item-description__quantity">
+                                    1 pieza
+                                </div>
+                                <div class="item-description__price">52€</div>
+                            </div>
+                        </div>
+                        <div class="order-item">
+                            <img class="order-item__image" src="img/single-course/course-img.png" alt="product-image">
+                            <div class="order-item__description item-description">
+                                <div class="item-description__info description-info">
+                                    <h2 class="description-info__name">Maratón de aparatologia online
+                                    </h2>
+                                    <p class="description-info__additional">10 días completos</p>
+                                </div>
+                                <div class="item-description__remover">quitar</div>
+                                <div class="item-description__date">20-29 Abril</div>
+                                <div class="item-description__price">250€</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ordering-list__price ordering-price">
+                        <div class="ordering-price__info ordering-info">
+                            <div class="ordering-info__point">subtotal:</div>
+                            <div class="ordering-info__description">302€</div>
+                        </div>
+                        <div class="ordering-price__info ordering-info">
+                            <div class="ordering-info__point">envio:</div>
+                            <div class="ordering-info__description">10€</div>
+                        </div>
+                        <div class="ordering-price__info ordering-info">
+                            <div class="ordering-info__point">código promocional:</div>
+                            <div class="ordering-info__description">summer 10%</div>
+                        </div>
+                        <div class="ordering-price__info ordering-info">
+                            <div class="ordering-info__point">en total:</div>
+                            <div class="ordering-info__description">312€</div>
+                        </div>
+                    </div>
+                    <button class="btn btn--payment" type="submit" form="order-form">ir al pago</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

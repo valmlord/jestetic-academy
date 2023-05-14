@@ -1,0 +1,161 @@
+.cart-ordering {
+  &__content {
+    padding-top: 32px;
+  }
+
+  .ordering-content {
+    &__steps {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-top: 30px;
+    }
+    &__form {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .ordering-steps {
+    &__point {
+      font: $futura-small;
+      text-transform: uppercase;
+      font-weight: 450;
+    }
+    &__icon {
+      width: 33px;
+      height: 8px;
+      margin: 0 16px;
+    }
+  }
+
+  .ordering-form {
+    margin-top: 50px;
+    &__return {
+      margin-top: 50px;
+    }
+    &__list {
+      background-color: $secondary;
+      margin-top: 50px;
+      position: relative;
+      padding-bottom: 92px;
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 10px;
+        background-color: $secondary;
+      }
+      &::before {
+        left: -10px;
+      }
+      &::after {
+        right: -10px;
+      }
+    }
+  }
+
+  .form {
+    &__title {
+      margin-top: 54px;
+      font: $cormorant-small;
+      margin-bottom: 10px;
+    }
+    &__fields {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .form-fields {
+    &__input {
+      border: none;
+      border-bottom: 1px solid $accent;
+      margin-top: 30px;
+      font: $futura-medium;
+      padding-bottom: 10px;
+      color: $input;
+    }
+  }
+
+  .form-return {
+    &__icon {
+      width: 35px;
+      height: 8px;
+    }
+
+    &__text {
+      margin-left: 19px;
+      font: $futura-small;
+      text-transform: uppercase;
+    }
+  }
+
+  .ordering-list {
+    &__header {
+      padding-top: 23px;
+      padding-bottom: 28px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  .ordering-header {
+    &__title {
+      font: $cormorant-small;
+    }
+    &__editor {
+      position: relative;
+      font: $futura-small;
+      color: $light-black;
+      text-align: right;
+      height: 20px;
+      border-bottom: 1px solid $light-black;
+    }
+  }
+
+  .ordering-price {
+    &__info {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-top: 8px;
+      align-items: flex-end;
+      &:first-child {
+        padding-top: 13px;
+      }
+      &:last-child {
+        margin-top: 21px;
+        border-top: 1px solid $grey;
+        padding-top: 19px;
+      }
+    }
+  }
+
+  .ordering-info {
+    &__point {
+      font: $futura-small;
+    }
+
+    &__description {
+      font: $futura-big;
+      font-weight: 450;
+    }
+  }
+}
+
+.cart-ordering .item-description__btn {
+  display: none;
+}
+
+.cart-ordering .item-description__quantity {
+  display: flex;
+}
+
+.cart-ordering .item-description__remover {
+  display: none;
+}
