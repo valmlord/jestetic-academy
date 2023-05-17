@@ -1,0 +1,55 @@
+<form class="form" id="order-form" action="#" method="POST">
+    <h2 class="form__title">Contacto</h2>
+    <div class="form__fields form-fields">
+        <input class="form-fields__input" type="text" id="name" name="name" required placeholder="Nombre *">
+        <input class="form-fields__input" type="text" id="surname" name="surname" required placeholder="Apellido *">
+    </div>
+    <div class="form__fields form-fields">
+        <input class="form-fields__input" type="email" id="email" name="email" required placeholder="Correo *">
+        <input class="form-fields__input" type="tel" id="phone" name="phone" required placeholder="Teléfono *">
+    </div>
+    <h2 class="form__title">Dirección de envío</h2>
+    <div class="form__fields form-fields">
+        <input class="form-fields__input" id="country" name="country" required placeholder="Pais *">
+        <input class="form-fields__input" type="text" id="city" name="city" required placeholder="Ciudad *">
+    </div>
+    <div class="form__fields form-fields">
+        <input class="form-fields__input" type="text" id="zipcode" name="zipcode" required
+            placeholder="Código postal *">
+        <input class="form-fields__input" id="address" name="address" required placeholder="Dirección *">
+    </div>
+    <div class="ordering-form__return form-return">
+        <svg class="form-return__icon">
+            <use xlink:href="img/sprites/sprite.svg#arrow-prev"></use>
+        </svg>
+        <span class="form-return__text">VOLVER AL CARRITO</span>
+    </div>
+</form>
+<div class="ordering-form__list ordering-list">
+    <div class="ordering-list__header ordering-header">
+        <h3 class="ordering-header__title">Su pedido</h3>
+        <a class="ordering-header__editor" href="#">editar orden</a>
+    </div>
+    <div class="ordering-list__items order-items">
+        @@include('order-list.html')
+    </div>
+    <div class="ordering-list__price ordering-price">
+        <div class="ordering-price__info ordering-info">
+            <div class="ordering-info__point">subtotal:</div>
+            <div class="ordering-info__description">302€</div>
+        </div>
+        <div class="ordering-price__info ordering-info">
+            <div class="ordering-info__point">envio:</div>
+            <div class="ordering-info__description">10€</div>
+        </div>
+        <div class="ordering-price__info ordering-info">
+            <div class="ordering-info__point">código promocional:</div>
+            <div class="ordering-info__description">summer 10%</div>
+        </div>
+        <div class="ordering-price__info ordering-info">
+            <div class="ordering-info__point">en total:</div>
+            <div class="ordering-info__description">312€</div>
+        </div>
+    </div>
+    <button class="btn btn--payment" type="submit" form="order-form">ir al pago</button>
+</div>

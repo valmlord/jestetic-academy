@@ -1,0 +1,85 @@
+.production-advantages {
+  &__content {
+    padding-top: 65px;
+    padding-bottom: 114px;
+    @include desktop {
+      padding-top: 87px;
+      padding-bottom: 144px;
+    }
+  }
+
+  .advantages-item {
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      &:first-of-type {
+        flex-direction: row-reverse;
+      }
+    }
+    &__img {
+      &-small {
+        width: 100%;
+        height: 283px;
+        object-fit: cover;
+        padding-top: 15px;
+        padding-left: 17px;
+        background: $two-borders;
+        background-repeat: no-repeat;
+        background-size: 49% 50%;
+        @include desktop {
+          margin-left: 50px;
+        }
+      }
+      &-big {
+        margin-top: 50px;
+        width: 100%;
+        height: 526px;
+        object-fit: cover;
+        padding-bottom: 13px;
+        padding-right: 13px;
+        background: $two-borders;
+        background-repeat: no-repeat;
+        background-size: 49% 50%;
+        @include desktop {
+          width: 367px;
+          margin-right: 125px;
+        }
+      }
+    }
+  }
+
+  .item-description {
+    &__title {
+      margin-top: 50px;
+      @include desktop {
+        margin-top: 0;
+      }
+    }
+
+    &__list {
+      margin-top: 30px;
+    }
+  }
+
+  .description-list {
+    &__text {
+      position: relative;
+      font: $futura-small;
+      color: $black;
+      padding-left: 25px;
+      @include tablet {
+        font: $futura-medium;
+      }
+      @include desktop {
+      }
+      &::before {
+        position: absolute;
+        content: '•';
+        top: 0;
+        left: 5px;
+      }
+    }
+  }
+}

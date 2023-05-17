@@ -1,0 +1,26 @@
+.production-decor {
+  &__content {
+    padding-top: 82px;
+    padding-bottom: 83px;
+    @include tablet {
+      padding-top: 111px;
+      padding-bottom: 94px;
+    }
+  }
+
+  .decor-content {
+    &__text {
+      text-align: center;
+      font: $cormorant-mobile;
+      font-size: 43px;
+      span {
+        text-transform: lowercase;
+        font: inherit;
+        font-style: italic;
+      }
+      @include tablet {
+        font: $cormorant-big;
+      }
+    }
+  }
+}

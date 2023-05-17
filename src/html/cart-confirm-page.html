@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cart Success</title>
+    <title>About Course</title>
     <link rel="stylesheet" href="css/main.css" />
     <!-- For modern browsers -->
     <link rel="icon" type="image/svg+xml" href="img/favicon/favicon.svg" />
@@ -13,12 +14,16 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
     <!-- For Android and future apps -->
     <link rel="manifest" href="manifest.json" />
-  </head>
+</head>
 
-  <body>
+<body>
     @@include('chunk/header.html')
-    <main>@@include('chunk/order-success.html')</main>
+    <main>
+        @@include('chunk/breadcrumbs.html')
+        @@include('chunk/cart-confirm.html')
+    </main>
     @@include('chunk/footer.html')
     <script src="js/main.js"></script>
-  </body>
+</body>
+
 </html>

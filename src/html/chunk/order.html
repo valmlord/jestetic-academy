@@ -5,45 +5,7 @@
             <div class="order-content__cards order-cards">
                 <div class="order-cards__quantity">2 productos</div>
                 <div class="order-cards__items order-items">
-                    <div class="order-item">
-                        <img class="order-item__image" src="img/products/products-img-1.png" alt="product-image">
-                        <div class="order-item__description item-description">
-                            <div class="item-description__info description-info">
-                                <h2 class="description-info__name">Oxybooster-oxigenación y protección solar de las
-                                    células
-                                </h2>
-                                <p class="description-info__additional">2ml*10 unidades</p>
-                            </div>
-                            <div class="item-description__remover">quitar</div>
-                            <div class="item-description__btn btn-quantity">
-                                <div class="btn-quantity__dec">
-                                    <svg class="btn-quantity__dec-icon">
-                                        <use xlink:href="img/sprites/sprite.svg#decimal-icon"></use>
-                                    </svg>
-                                </div>
-                                <span class="btn-quantity__amount">2</span>
-                                <div class="btn-quantity__inc">
-                                    <svg class="btn-quantity__inc-icon">
-                                        <use xlink:href="img/sprites/sprite.svg#increment-icon"></use>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="item-description__price">52€</div>
-                        </div>
-                    </div>
-                    <div class="order-item">
-                        <img class="order-item__image" src="img/single-course/course-img.png" alt="product-image">
-                        <div class="order-item__description item-description">
-                            <div class="item-description__info description-info">
-                                <h2 class="description-info__name">Maratón de aparatologia online
-                                </h2>
-                                <p class="description-info__additional">10 días completos</p>
-                            </div>
-                            <div class="item-description__remover">quitar</div>
-                            <div class="item-description__date">20-29 Abril</div>
-                            <div class="item-description__price">250€</div>
-                        </div>
-                    </div>
+                    @@include('order-list.html')
                 </div>
                 <div class="order-cards__amount order-amount">
                     <form class="order-amount__promocode order-promocode" onsubmit="">

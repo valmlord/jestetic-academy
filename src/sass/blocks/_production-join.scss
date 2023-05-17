@@ -1,0 +1,62 @@
+.production-join {
+  background: $secondary;
+  &__content {
+    padding-top: 86px;
+    padding-bottom: 85px;
+    @include tablet {
+      padding-top: 92px;
+      padding-bottom: 93px;
+    }
+  }
+
+  .join-content {
+    &__title {
+      margin-top: 15px;
+      font-size: 43px;
+    }
+    &__description {
+      margin-top: 20px;
+      @include tablet {
+        margin-top: 46px;
+      }
+    }
+  }
+
+  .join-description {
+    &__text {
+      font: $futura-small;
+      color: $black;
+    }
+    &__advantages {
+      margin-top: 12px;
+      @include tablet {
+        margin-top: 26px;
+      }
+    }
+  }
+
+  .join-advantages {
+    display: flex;
+    flex-direction: column;
+
+    &__item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-top: 24px;
+    }
+  }
+
+  .join-item {
+    &__number {
+      color: $black;
+      font: $cormorant-big;
+    }
+    &__text {
+      color: $black;
+      font: $futura-small;
+      margin-left: 40px;
+      max-width: 597px;
+    }
+  }
+}

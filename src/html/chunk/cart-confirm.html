@@ -1,0 +1,64 @@
+<section class="cart-ordering">
+    <div class="container">
+        <div class="cart-ordering__content ordering-content">
+            <h1 class="ordering-content__title title">registro de <span>pedidos</span></h1>
+            <div class="ordering-content__steps ordering-steps">
+                <span class="ordering-steps__point">envio</span>
+                <span>
+                    <svg class="ordering-steps__icon">
+                        <use xlink:href="img/sprites/sprite.svg#long-arrow"></use>
+                    </svg>
+                </span>
+                <span class="ordering-steps__point">confirmación</span>
+            </div>
+            <div class="ordering-content__confirm ordering-confirm">
+                <h2 class="form__title">Contacto</h2>
+                <div class="form__confirm form-confirm">
+                    <span class="form-confirm__text">Valentina Kashayed</span>
+                    <span class="form-confirm__text">+1(345)323-43-32</span>
+                    <span class="form-confirm__text">valentina@gmail.com</span>
+                </div>
+                <h2 class="form__title">Dirección de envío</h2>
+                <div class="form__confirm form-confirm">
+                    <span class="form-confirm__text">Toledo, United States </span>
+                    <span class="form-confirm__text">Royal Ln. Mesa, New Jersey 45463</span>
+                    <span class="form-confirm__text">35180</span>
+                </div>
+                <div class="ordering-form__return form-return">
+                    <svg class="form-return__icon">
+                        <use xlink:href="img/sprites/sprite.svg#arrow-prev"></use>
+                    </svg>
+                    <span class="form-return__text">VOLVER AL CARRITO</span>
+                </div>
+                <div class="ordering-form__list ordering-list">
+                    <div class="ordering-list__header ordering-header">
+                        <h3 class="ordering-header__title">Su pedido</h3>
+                        <a class="ordering-header__editor" href="#">editar orden</a>
+                    </div>
+                    <div class="ordering-list__items order-items">
+                        @@include('order-list.html')
+                    </div>
+                    <div class="ordering-list__price ordering-price">
+                        <div class="ordering-price__info ordering-info">
+                            <div class="ordering-info__point">subtotal:</div>
+                            <div class="ordering-info__description">302€</div>
+                        </div>
+                        <div class="ordering-price__info ordering-info">
+                            <div class="ordering-info__point">envio:</div>
+                            <div class="ordering-info__description">10€</div>
+                        </div>
+                        <div class="ordering-price__info ordering-info">
+                            <div class="ordering-info__point">código promocional:</div>
+                            <div class="ordering-info__description">summer 10%</div>
+                        </div>
+                        <div class="ordering-price__info ordering-info">
+                            <div class="ordering-info__point">en total:</div>
+                            <div class="ordering-info__description">312€</div>
+                        </div>
+                    </div>
+                    <button class="btn btn--payment" type="submit" form="order-form">ir al pago</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,6 +1,9 @@
 .cart-ordering {
   &__content {
     padding-top: 32px;
+    @include tablet {
+      padding-bottom: 60px;
+    }
   }
 
   .ordering-content {
@@ -13,6 +16,11 @@
     &__form {
       display: flex;
       flex-direction: column;
+      @include desktop {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
     }
   }
 
@@ -31,8 +39,12 @@
 
   .ordering-form {
     margin-top: 50px;
+
     &__return {
       margin-top: 50px;
+      @include desktop {
+        margin-top: 101px;
+      }
     }
     &__list {
       background-color: $secondary;
@@ -54,42 +66,20 @@
       &::after {
         right: -10px;
       }
-    }
-  }
 
-  .form {
-    &__title {
-      margin-top: 54px;
-      font: $cormorant-small;
-      margin-bottom: 10px;
-    }
-    &__fields {
-      display: flex;
-      flex-direction: column;
-    }
-  }
+      @include tablet {
+        padding: 46px 55px 55px 55px;
 
-  .form-fields {
-    &__input {
-      border: none;
-      border-bottom: 1px solid $accent;
-      margin-top: 30px;
-      font: $futura-medium;
-      padding-bottom: 10px;
-      color: $input;
-    }
-  }
+        &::after,
+        &::before {
+          display: none;
+        }
+      }
 
-  .form-return {
-    &__icon {
-      width: 35px;
-      height: 8px;
-    }
-
-    &__text {
-      margin-left: 19px;
-      font: $futura-small;
-      text-transform: uppercase;
+      @include desktop {
+        flex-basis: 570px;
+        padding: 30px 45px;
+      }
     }
   }
 
@@ -101,6 +91,9 @@
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
+      @include desktop {
+        padding-top: 0;
+      }
     }
   }
 
