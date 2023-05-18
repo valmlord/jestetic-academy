@@ -18,3 +18,11 @@
     font: $cormorant-big;
   }
 }
+
+.subtitle {
+  font: $futura-small;
+  color: $black;
+  @include tablet {
+    font: $futura-medium;
+  }
+}

@@ -1,0 +1,78 @@
+.production-cooperation {
+  background: $secondary;
+  &__content {
+    padding-top: 76px;
+    padding-bottom: 134px;
+    @include tablet {
+      padding-top: 99px;
+      padding-bottom: 143px;
+    }
+  }
+
+  .cooperation-content {
+    position: relative;
+    @include tablet {
+      &:before {
+        position: absolute;
+        content: url('../img/hero/decor-full.svg');
+        bottom: 0px;
+        right: 33px;
+        z-index: -1;
+        transform: rotate(112deg);
+      }
+    }
+
+    @include desktop {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+    &__image {
+      width: 100%;
+      padding: 11px;
+      background: $two-borders-reversed;
+      background-repeat: no-repeat;
+      background-size: 49% 49%;
+      @include tablet {
+        max-width: 389px;
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+
+    &__block {
+      margin-top: 70px;
+      @include desktop {
+        width: 42%;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .cooperation-block {
+    &__subtitle {
+      margin-top: 17px;
+    }
+
+    &__form {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 59px;
+    }
+  }
+
+  .form {
+    &__input {
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid $accent;
+      margin-top: 30px;
+      font: $futura-medium;
+      padding-bottom: 10px;
+      background: $secondary;
+      color: $input;
+    }
+  }
+}
